@@ -102,7 +102,7 @@ export const headerData = {
         },
         {
           text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          href: getPermalink('formulario', 'category'),
         },
         {
           text: 'Tag Page',

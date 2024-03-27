@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: LESCOT
-    template: '%s — AstroWind'
+    template: '%s — LESCOT'
   description: "\U0001F680 LESCOT pretende buscar una solución a las brechas de comunicación presentes entre personas sordas y oyentes, mediante la adaptabilidad de un “traductor” de LESCO utilizando el lenguaje de programación Python junto a un sistema combinado de vision artificial, facilitando las interacciones entre personas sordas y oyentes, además de apoyar la Ley No. 9822."
   robots:
     index: true
