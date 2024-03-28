@@ -11,7 +11,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'Nuestro quipo',
 };
 ---
 
@@ -42,14 +42,18 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: "primary", target: '_blank', text: 'Hire me', href: '/' }]}
+    title="Conoce a nuestro equipo"
+    tagline="EQUIPO LESCOT"
+    actions={[
+                { variant: "primary", 
+                target: '_blank', 
+                text: '@visionlescot', 
+                href: 'https://www.instagram.com/visionlescot', 
+                icon:'tabler:brand-instagram'}
+              ]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree
-      from New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into
-      captivating realities.
+      El equipo de LESCOT se encuentra formado por 4 estudiantes de la especialidad técnica Electrónica Industrial, quienes se encuentran en su penúltimo año de formación en el Colegio Técnico Profesional Don Bosco.
     </Fragment>
   </Hero>
 
@@ -60,56 +64,101 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-instagram',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: '@Stevenalp_cr',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-twitter',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 'StevenAlp_CR',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-github',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'Stevenalp207',
           href: '#',
         },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      src: 'https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/380015153_694289832752480_5759422277725139278_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Brak9Ug0C58AX8JB5fQ&_nc_ht=scontent.fsyq2-1.fna&oh=00_AfBpKdZq6_fJpcXcbCppP75OkjgCq4VfrwfbxpokbQnQZg&oe=660A73AD',
       alt: 'Colorful Image',
       loading: 'eager',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Steven Alexander <br>Alpizar Gamboa</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Me apasiona la electrónica y formo parte de la banda de CEDES. Soy una persona aplicada y responsable, amo la programación. Además, tengo el honor de liderar el proyecto LESCOT.
       </p>
-      <br />
-      <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
-      </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+  <Content
+  id="about"
+  columns={3}
+  items={[
+    {
+      icon: 'tabler:brand-dribbble',
+      callToAction: {
+        target: '_blank',
+        text: 'Dribbble',
+        href: '#',
+      },
+    },
+    {
+      icon: 'tabler:brand-behance',
+      callToAction: {
+        target: '_blank',
+        text: 'Behance',
+        href: '#',
+      },
+    },
+    {
+      icon: 'tabler:brand-pinterest',
+      callToAction: {
+        target: '_blank',
+        text: 'Pinterest',
+        href: '#',
+      },
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    alt: 'Colorful Image',
+    loading: 'eager',
+  }}
+>
+  <Fragment slot="content">
+    <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+    <p>
+      Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
+      pixel becomes a brushstroke in the canvas of imagination.
+    </p>
+    <br />
+    <p>
+      I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
+      details of typography, or the vibrant hues of nature during my outdoor escapades.
+    </p>
+    <br />
+    <p>If you're curious to dive deeper into my work, you can follow me:</p>
+  </Fragment>
 
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
   <!-- Steps Widget ****************** -->
 
   <Steps
