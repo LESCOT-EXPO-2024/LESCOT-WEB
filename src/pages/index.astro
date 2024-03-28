@@ -6,6 +6,7 @@ import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -52,6 +53,40 @@ const metadata = {
 
   <Note />
 
+  <Steps2
+    title="Nuestras metas"
+    subtitle="Proponer una solución a las brechas de comunicación en la vida cotidiana de las personas con discapacidad auditiva con el desarollo de un “traductor” de LESCO (Lenguaje de Señas Costarricense)."
+    isReversed={true}
+    callToAction={{
+      text: 'Conoce más de nosotros',
+      href: 'about',
+    }}
+    items={[
+      {
+        title: 'Analizar',
+        description: 'las brechas de comunicación en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre las personas mediante la creación de un formulario.',
+        icon: 'tabler:chart-histogram',
+      },
+      {
+        title: 'Almacenar',
+        description:
+          'una base de datos que contenga las señas para el machine learning y su correcto reconocimiento e interpretación a texto.',
+        icon: 'tabler:folders',
+      },
+      {
+        title: 'Desarrollar',
+        description:
+          'un algoritmo de reconocimiento de gestos de LESCO preciso y confiable, que permita al “traductor” interpretar las señas con precisión y generar una traducción coherente.',
+        icon: 'tabler:brand-python',
+      },
+      {
+        title: 'Implementar',
+        description:
+          'el módulo LESCOT en los diferentes puntos de interes o contacto de manera que pueda extenderse hacia el publico dirigido.',
+        icon: 'tabler:certificate-2',
+      }
+    ]}
+  />
   <!-- Features Widget *************** -->
   <Features
     id="features"
