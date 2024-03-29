@@ -106,7 +106,7 @@ export const headerData = {
         },
         {
           text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          href: getPermalink('lesco', 'tag'),
         },
       ],
     },
