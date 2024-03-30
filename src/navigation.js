@@ -18,8 +18,8 @@ export const headerData = {
           href: getPermalink('/homes/mobile-app'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Equipo',
+          href: getPermalink('/homes/equipo'),
         },
       ],
     },
@@ -102,7 +102,7 @@ export const headerData = {
         },
         {
           text: 'Category Page',
-          href: getPermalink('formulario', 'category'),
+          href: getPermalink('LESCO', 'category'),
         },
         {
           text: 'Tag Page',

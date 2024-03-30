@@ -4,12 +4,12 @@ author: Dr. Alejandro Oviedo
 title: Costa Rica, atlas sordo
 excerpt: Este artículo fue escrito por el Dr. Alejandro Oviedo para el deaf-atlas en Septiembre de 2013. El texto fue amablemente corregido por un equipo formado por los siguientes expertos locales; Prof. Dr. Carlos Sánchez Avendaño (Linguista, Universidad de Costa Rica), Mag. Christian Ramírez Valerio (Linguista, miembro de la comunidad sorda costarricense) y Marcela Zúñiga Vega (Intérprete de LESCO, actual presidenta de ANCITILES).
 image: https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/279071152_2142894659213984_499499716181786735_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=WNcDRTAwgUQAX_JzCtj&_nc_ht=scontent.fsyq2-1.fna&oh=00_AfAnMLFZBEE0Y6ei7lxR6KvCLHgvjA6LGUzaySh5h4mLzA&oe=660B7C8B
+category: LESCO
 tags:
   - LESCO
   - ATLAS
 metadata:
   canonical: https://lescot-web.vercel.app/atlas
-readingTime: 1
 ---
 
 ## Información básica
