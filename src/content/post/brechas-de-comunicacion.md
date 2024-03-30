@@ -9,7 +9,7 @@ tags:
   - LESCO
   - FORMULARIO
 metadata:
-  canonical: https://lescot-web.vercel.app/atlas
+  canonical: https://lescot-web.vercel.app/brechas-de-comunicacion
 ---
 
 ### ¿Cuántos idiomas/lenguas sabes?
@@ -21,3 +21,18 @@ metadata:
 | SI  | NO  |
 | ------------ | ------------ |
 | 11,4%  | 88,6%  |
+
+### Si tu respuesta fue no, ¿qué te impide aprender LESCO?
+|   PRINCIPALES FACTORES   | | |
+| ------------ | ------------ | ------------ |
+|  DINERO | TIEMPO  |  FALTA DE NECESIDAD |
+
+### ¿Tienes algún familiar con discapacidad auditiva o del habla?
+
+| SI  | NO  |
+| ------------ | ------------ |
+| 12,7%  | 87,3%  |
+
+
+------------
+> ###### *Repuestas obtenidas de: https://forms.gle/cDnGZFHyRhgnKhMw7*

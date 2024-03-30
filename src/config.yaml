@@ -1,6 +1,6 @@
 site:
   name: LESCOT
-  site: 'https://astrowind.vercel.app'
+  site: 'https://lescot-web.vercel.app'
   base: '/'
   trailingSlash: false
 
