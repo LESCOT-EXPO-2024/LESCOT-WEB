@@ -7,7 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps from '~/components/widgets/Steps.astro';
+//import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
@@ -20,12 +20,12 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '#' }, 
+        { text: 'Inicio', href: '#' },   
         { text: 'SAG', href: '#SAG' },
         { text: 'SAP', href: '#SAP' },
         { text: 'AGM', href: '#AGM' },
         { text: 'MSP', href: '#MSP' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
+        { text: 'Nuestras habilidades', href: '#habilidades' },
       ]}
       actions={[
         {
@@ -89,7 +89,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/380015153_694289832752480_5759422277725139278_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Brak9Ug0C58AX8JB5fQ&_nc_ht=scontent.fsyq2-1.fna&oh=00_AfBpKdZq6_fJpcXcbCppP75OkjgCq4VfrwfbxpokbQnQZg&oe=660A73AD',
+      src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/ab5f4709-3ea4-410c-9f35-7de481f945f1',
       alt: 'Steven Image',
       loading: 'eager',
     }}
@@ -137,8 +137,8 @@ const metadata = {
     },
   ]}
   image={{
-    src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-    alt: 'Colorful Image',
+    src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/184f802b-6783-4d3f-b35c-c19bcd8cc348',
+    alt: 'SUSSETH IMAGE',
     loading: 'eager',
   }}
 >
@@ -192,8 +192,8 @@ const metadata = {
     },
   ]}
   image={{
-    src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-    alt: 'Colorful Image',
+    src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/84922e48-bf52-40b0-bf2b-14937ca355d4',
+    alt: 'ALEJANDRO IMAGE',
     loading: 'eager',
   }}
   >
@@ -248,8 +248,8 @@ const metadata = {
     },
   ]}
   image={{
-    src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-    alt: 'Colorful Image',
+    src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/afb02bf8-e0f1-4030-bb01-93d1e09740f1',
+    alt: 'MARIANA IMAGE',
     loading: 'eager',
   }}
   >
@@ -315,51 +315,52 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
+  id="habilidades"
     title="Habilidades"
     subtitle="Descubre sobre las diferentes habilidades obtenidas en el desarrollo de LESCOT."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Trabajo en equipo',
+        description: 'Capacidad para colaborar efectivamente con otros miembros del equipo para lograr objetivos comunes y resolver problemas de manera conjunta.',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Lenguage de programación Python', 
+        description: 'Habilidad para desarrollar aplicaciones y soluciones utilizando el lenguaje de programación Python, conocido por su simplicidad y versatilidad en una amplia gama de proyectos.',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Inteligencia Artificial',
+        description: 'Experiencia en la creación de sistemas informáticos que pueden realizar tareas que normalmente requieren inteligencia humana, como reconocimiento de voz, procesamiento de imágenes y toma de decisiones autónoma.',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Machine learning',
+        description: 'Destreza en el desarrollo de algoritmos y modelos que permiten a las computadoras aprender y mejorar automáticamente a partir de la experiencia, sin necesidad de ser programadas explícitamente para cada tarea.',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'Sistemas de Visión Artificial',
+        description: 'Competencia en el diseño e implementación de sistemas que permiten a las máquinas "ver" y comprender el entorno utilizando cámaras y sensores, con aplicaciones en reconocimiento de objetos, navegación autónoma y más.',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'Ciencia de datos',
+        description: 'Proficiencia en el análisis y visualización de datos para extraer información significativa y tomar decisiones informadas en una variedad de campos, desde negocios hasta ciencias sociales.',
       },
       {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+        title: 'Gestión de proyectos',
+        description: 'Conocimiento en la planificación, organización y ejecución de proyectos para lograr objetivos específicos dentro de plazos y presupuestos establecidos, asegurando la coordinación efectiva de recursos y equipos.',
       },
       {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
+        title: 'Sensibilidad cultural y social',
+        description: 'Sensibilidad y comprensión de las diferencias culturales y sociales, lo que permite trabajar de manera inclusiva y considerar las necesidades y perspectivas de diversas comunidades y grupos de usuarios.',
       },
       {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: 'Comunicación acertiva',
+        description: 'Habilidad para expresar ideas de manera clara, concisa y persuasiva, tanto verbalmente como por escrito, facilitando una comunicación efectiva con colegas, clientes y otras partes interesadas.',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** 
 
   <Content
     id="porfolio"
@@ -398,9 +399,9 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content>-->
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** 
 
   <Content
     isReversed
@@ -436,9 +437,9 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content>-->
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** 
 
   <Content
     isReversed
@@ -473,66 +474,66 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content>-->
 
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    title="Opiniones del proyecto"
+    subtitle="Descubre alguna de las opiniones recibidas en EXPOTEC 2023."
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
+        testimonial: `El proyecto LESCOT es una contribución invaluable para cerrar la brecha de comunicación entre personas sordas y oyentes en Costa Rica. Es una solución innovadora y muy necesaria que tiene el potencial de mejorar significativamente la calidad de vida de las personas con discapacidad auditiva.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO',
+        testimonial: `Como persona que habla LESCO, veo el proyecto LESCOT como una herramienta revolucionaria que puede transformar la manera en que las personas con discapacidad auditiva se comunican con el mundo que las rodea. Este proyecto no solo promueve la inclusión, sino que también empodera a las personas sordas al facilitarles el acceso a la información y a los servicios de manera más efectiva.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO',
+        testimonial: `LESCO significa Lengua de Señas Costarricense, eso significa que es parte de nuestra cultura y ustedes tienen que impulsar esa herramienta.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
+        testimonial: `Una innovación increible.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
       {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
+        testimonial: `Es una necesidad urgente en nuestra sociedad.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
       {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
+        testimonial: `LESCOT es un paso significativo hacia la inclusión total en Costa Rica. Este proyecto demuestra un compromiso genuino con la accesibilidad y la igualdad de oportunidades para todas las personas.`,
+        name: 'Visitante en EXPOTEC 2023',
+        job: 'Anónimo',
         image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
+          src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/871fb2fa-c4e1-4000-848b-2c8de122d9b4',
+          alt: 'Anonimo Image',
         },
       },
     ]}

@@ -3,23 +3,23 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Casa',
+      text: 'Proyecto',
       links: [
         {
           text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          href: getPermalink('/proyecto/saas'),
         },
         {
           text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          href: getPermalink('/proyecto/startup'),
         },
         {
           text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/proyecto/mobile-app'),
         },
         {
           text: 'Equipo',
-          href: getPermalink('/homes/equipo'),
+          href: getPermalink('/proyecto/equipo'),
         },
       ],
     },
