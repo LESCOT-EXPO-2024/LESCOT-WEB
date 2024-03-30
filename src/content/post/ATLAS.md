@@ -9,6 +9,7 @@ tags:
   - ATLAS
 metadata:
   canonical: https://lescot-web.vercel.app/atlas
+readingTime: 1
 ---
 
 ## Información básica
