@@ -55,7 +55,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = createPath(trimSlash(slug));
       break;
 
-    case 'page}':
+    case 'page':
     default:
       permalink = createPath(slug);
       break;
