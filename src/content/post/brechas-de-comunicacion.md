@@ -13,26 +13,29 @@ metadata:
 ---
 
 ### ¿Cuántos idiomas/lenguas sabes?
-| 1  | 2  | 3  | 4  | 5  |
-| ------------ | ------------ | ------------ | ------------ | ------------ |
-| 33,5%  |  53,8% | 10,1%  | 1,9%  | 0,6%  |
+
+| 1     | 2     | 3     | 4    | 5    |
+| ----- | ----- | ----- | ---- | ---- |
+| 33,5% | 53,8% | 10,1% | 1,9% | 0,6% |
 
 ### ¿Es el LESCO uno de esos idiomas/lenguas?
-| SI  | NO  |
-| ------------ | ------------ |
-| 11,4%  | 88,6%  |
+
+| SI    | NO    |
+| ----- | ----- |
+| 11,4% | 88,6% |
 
 ### Si tu respuesta fue no, ¿qué te impide aprender LESCO?
-|   PRINCIPALES FACTORES   | | |
-| ------------ | ------------ | ------------ |
-|  DINERO | TIEMPO  |  FALTA DE NECESIDAD |
+
+| PRINCIPALES FACTORES |        |                    |
+| -------------------- | ------ | ------------------ |
+| DINERO               | TIEMPO | FALTA DE NECESIDAD |
 
 ### ¿Tienes algún familiar con discapacidad auditiva o del habla?
 
-| SI  | NO  |
-| ------------ | ------------ |
-| 12,7%  | 87,3%  |
+| SI    | NO    |
+| ----- | ----- |
+| 12,7% | 87,3% |
 
+---
 
-------------
-> ###### *Repuestas obtenidas de: https://forms.gle/cDnGZFHyRhgnKhMw7*
+> ###### _Repuestas obtenidas de: https://forms.gle/cDnGZFHyRhgnKhMw7_

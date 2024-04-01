@@ -111,7 +111,13 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Bitácora', href: 'https://docs.google.com/document/d/1Hxc8AN_Jazl7ty1PhKYLaaY7R1G3iFdGMxWRrWoW9kk/edit', target: '_blank' }],
+  actions: [
+    {
+      text: 'Bitácora',
+      href: 'https://docs.google.com/document/d/1Hxc8AN_Jazl7ty1PhKYLaaY7R1G3iFdGMxWRrWoW9kk/edit',
+      target: '_blank',
+    },
+  ],
 };
 
 export const footerData = {

@@ -3,16 +3,16 @@ import { Image } from 'astro:assets';
 import LESCOTLOGO from '~/assets/images/LESCOT2.webp';
 ---
 
-<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-
+<span
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+>
   <Image
-  src={LESCOTLOGO}
-  widths={[200, 400, 600]}
-  sizes="(max-width: 399px) 200px, (max-width: 599px) 400px, 600px"
-  loading="eager"
-  width={128} 
-  height={72} 
-  alt="LOGO DE LESCOT"
-/>
-
+    src={LESCOTLOGO}
+    widths={[200, 400, 600]}
+    sizes="(max-width: 399px) 200px, (max-width: 599px) 400px, 600px"
+    loading="eager"
+    width={128}
+    height={72}
+    alt="LOGO DE LESCOT"
+  />
 </span>

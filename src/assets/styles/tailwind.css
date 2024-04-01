@@ -19,7 +19,7 @@
     color: var(--aw-color-text-muted);
   }
   .text-dark {
-    color: var(--aw-color-bg-page-dark)
+    color: var(--aw-color-bg-page-dark);
   }
 }
 
@@ -48,7 +48,7 @@
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
   @apply bg-page md:bg-[#2c3b4e] border-b border-gray-500/20;
-  box-shadow: none; 
+  box-shadow: none;
 }
 /* #header.scroll > div:last-child {
   @apply py-3;
