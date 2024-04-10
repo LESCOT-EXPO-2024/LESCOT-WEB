@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -17,8 +16,8 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
+   <!--<Fragment slot="header">
+   <Header
       links={[
         { text: 'Inicio', href: '#' },
         { text: 'SAG', href: '#SAG' },
@@ -36,7 +35,7 @@ const metadata = {
       isSticky
       showToggleTheme
     />
-  </Fragment>
+  </Fragment> -->
 
   <!-- Hero2 Widget ******************* -->
 
@@ -64,7 +63,7 @@ const metadata = {
 
   <Content
     id="SAG"
-    columns={1}
+    columns={3}
     items={[
       {
         icon: 'tabler:brand-instagram',
@@ -99,11 +98,11 @@ const metadata = {
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Steven Alexander <br />Alpizar Gamboa
+        Steven Alexander Alpízar Gamboa
       </h2>
       <p>
-        Me apasiona la electrónica y formo parte de la banda de CEDES. Soy una persona aplicada y responsable, amo la
-        programación. Además, tengo el honor de liderar el proyecto LESCOT.
+        Me encanta la electrónica y formo parte de la banda de CEDES Don Bosco. Soy una persona aplicada y responsable, amo la programación. Además, tengo el honor de liderar el proyecto LESCOT.
+        Deseo ser un ingeniero electromecanico. 
       </p>
     </Fragment>
 
@@ -557,15 +556,8 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Hire me',
-        href: '/',
-      },
-    ]}
+    title="EXPOTEC 2023"
+    subtitle="RECONOCIDOS POR LA EMPRESA EMERSON COMO MEJOR PROYECTO DE ELECTRÓNICA INDUSTRIAL DÉCIMO."
   />
 
   <!-- BlogLatestPost Widget **************** -->
