@@ -98,7 +98,7 @@ interface signal {
       },
       {
         letter: 'O',
-        procedure: `Optimize your online presence for maximum visibility and engagement across all digital channels. <br /> Offer value to your audience through informative content, helpful resources, and exclusive offers. <br /> Open lines of communication with your customers and encourage feedback to improve your products and services. <br /> Outperform your competitors by constantly innovating and refining your approach to marketing and customer service.`,
+        procedure: `Para realizar la seña de la "O" en LESCO, extiende tu mano dominante con la palma hacia afuera y los dedos juntos. Separa ligeramente el pulgar del resto de los dedos creando una pequeña abertura circular. Mantén la mano quieta en esta posición sin movimiento adicional. Puedes practicar frente a un espejo y buscar videos en YouTube o consultar diccionarios LESCO en línea para ver la seña en movimiento.`,
         imageSrc: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/a155f228-4b93-4d0b-8558-0e5cffa32160',
         imageAlt: 'Imagen seña O',
       },
