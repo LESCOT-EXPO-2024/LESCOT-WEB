@@ -40,6 +40,7 @@ export default defineConfig({
       include: {
         tabler: ['*'],
         'flat-color-icons': [
+          'electronics',
           'template',
           'gallery',
           'approval',
