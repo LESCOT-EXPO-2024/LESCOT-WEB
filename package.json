@@ -21,6 +21,7 @@
     "@vercel/analytics": "^1.2.2",
     "astro": "^4.5.12",
     "astro-icon": "^1.1.0",
+    "flowbite": "^2.3.0",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "typescript-esbuild": "^0.4.10",
