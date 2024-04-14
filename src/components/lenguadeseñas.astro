@@ -1,116 +1,127 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import paises from '~/content/lenguaseñas'
+import paises from '~/content/lenguaseñas';
 import type { Lenguadesenas } from '~/types';
 
-const {
-  id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
-} = Astro.props as Lenguadesenas;
-
-
+const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
 ---
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-    <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
-        <div class="pb-4 bg-white dark:bg-dark">
-            <label for="table-search" class="sr-only">Buscar</label>
-            <div class="relative">
-                <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
-                <input type="text" id="table-search-users" class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Buscar por país o continente lengua de señas">
-            </div>
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-5xl ${classes.container ?? ''}`}
+  bg={bg}
+>
+  <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
+    <div class="pb-4 bg-white dark:bg-dark">
+      <label for="table-search" class="sr-only">Buscar</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
         </div>
-        <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">                
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-black dark:text-white">
-                            PAÍS
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-black dark:text-white">
-                            LENGUA DE SEÑAS
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {paises.map((pais) => (
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <td class="px-6 py-4">
-                                <div class="flex items-center">
-                                    <img class="w-10 h-8 sm:w-14 sm:h-10 rounded-full mr-3" src={pais.bandera} alt={`${pais.nombre} Bandera`} />
-                                    <div>
-                                        <div class="text-base font-semibold text-black dark:text-white">{pais.nombre}</div>
-                                        <div class="text-xs text-gray-500 dark:text-muted">{pais.continente}</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 text-black dark:text-white">{pais.lengua}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        <input
+          type="text"
+          id="table-search-users"
+          class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Buscar por país o continente lengua de señas (si el buscador no funciona, recarga la pagina)"
+        />
+      </div>
     </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-black dark:text-white">
+              PAÍS
+            </th>
+            <th scope="col" class="px-6 py-3 text-black dark:text-white">
+              LENGUA DE SEÑAS
+            </th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          {paises.map((pais) => (
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  <img
+                    class="w-10 h-8 sm:w-14 sm:h-10 rounded-full mr-3"
+                    src={pais.bandera}
+                    alt={`${pais.nombre} Bandera`}
+                  />
+                  <div>
+                    <div class="text-base font-semibold text-black dark:text-white">{pais.nombre}</div>
+                    <div class="text-xs text-gray-500 dark:text-muted">{pais.continente}</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 text-black dark:text-white">{pais.lengua}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </WidgetWrapper>
+
 <script>
-function recargarPaginaUnaVez() {
-  // Verificar si la página ya ha sido recargada antes
-  if (!localStorage.getItem('paginaRecargada')) {
-    // Marcar que la página ha sido recargada
-    localStorage.setItem('paginaRecargada', 'true');
-    // Recargar la página
-    location.reload();
-  }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('table-search-users');
+    const tableBody = document.getElementById('table-body');
 
-// Llamar a la función al cargar la página
-recargarPaginaUnaVez();
-document.addEventListener("DOMContentLoaded", function() {
-    const input = document.getElementById("table-search-users");
-    const rows = document.querySelectorAll("tbody tr");
-    const cellsArray = Array.from(rows).map(row => Array.from(row.querySelectorAll("td")).map(cell => cell.textContent.trim().toLowerCase()));
-
-    // Función para obtener el valor de búsqueda de la URL
-    const getSearchParam = () => {
+    if (searchInput && tableBody) {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('search') || "";
-    };
+        const searchQuery = urlParams.get('q');
 
-    // Función para establecer el valor de búsqueda en la URL
-    const setSearchParam = (searchText) => {
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set('search', searchText);
-        window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
-    };
+        if (searchQuery) {
+            searchInput.value = searchQuery;
+            filterTable(searchQuery);
+        }
 
-    // Función para aplicar el filtro
-    const applyFilter = (searchText) => {
-        rows.forEach((row, index) => {
-            const found = cellsArray[index].some(cellText => cellText.includes(searchText));
-            row.style.display = found ? "table-row" : "none";
+        searchInput.addEventListener('input', function() {
+            const inputValue = searchInput.value.trim();
+            urlParams.set('q', inputValue);
+
+            const newUrl = window.location.pathname + '?' + urlParams.toString();
+            history.replaceState(null, '', newUrl);
+
+            filterTable(inputValue);
         });
-    };
 
-    // Función para establecer el valor del input y aplicar el filtro
-    const setInputValueAndFilter = () => {
-        const searchText = getSearchParam();
-        input.value = searchText;
-        applyFilter(searchText);
-    };
+        window.addEventListener('popstate', function() {
+            if (searchInput.value !== '') {
+                filterTable(searchInput.value.trim());
+            }
+        });
+    }
 
-    // Llamar a la función setInputValueAndFilter al cargar la página o cuando la página se muestra nuevamente desde el historial
-    window.addEventListener('pageshow', setInputValueAndFilter);
-    
-    // Escuchar cambios en el input y actualizar la URL
-    input.addEventListener("input", function() {
-        const searchText = input.value.trim().toLowerCase();
-        setSearchParam(searchText);
-        applyFilter(searchText);
-    });
+    function filterTable(query) {
+        const rows = tableBody.querySelectorAll('tr');
+
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            const country = row.querySelector('td:nth-child(1)').innerText;
+            const language = row.querySelector('td:nth-child(2)').innerText;
+
+            if ((country.toLowerCase()).includes(query.toLowerCase()) || (language.toLowerCase()).includes(query.toLowerCase())) {
+                row.classList.remove('hidden');
+            } else {
+                row.classList.add('hidden');
+            }
+        }
+    }
 });
 </script>
