@@ -7,6 +7,12 @@ interface Pais {
   
   const paises: Pais[] = [
     {
+      "nombre": "Sistema de Signos Internacional",
+      "bandera": "https://www.crhoy.com/wp-content/uploads/2023/09/Bandera-Comunidad-Sorda.jpg",
+      "lengua": "Lengua Internacional de Signos (SSI), Lengua de Señas Pidgin​ o Gesto Internacional",
+      "continente": "Internacional"
+    },
+    {
       "nombre": "Antigua y Barbuda",
       "bandera": "https://flagcdn.com/w640/ag.webp",
       "lengua": "Lengua de Señas de Antigua y Barbuda",
