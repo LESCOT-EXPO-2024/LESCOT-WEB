@@ -12,7 +12,6 @@ const {
 
 
 ---
-
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
     <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
         <div class="pb-4 bg-white dark:bg-dark">
@@ -27,7 +26,7 @@ const {
             </div>
         </div>
         <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">                
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3 text-black dark:text-white">
@@ -58,20 +57,60 @@ const {
         </div>
     </div>
 </WidgetWrapper>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const input = document.getElementById("table-search-users");
-        const rows = document.querySelectorAll("tbody tr");
-        const cellsArray = Array.from(rows).map(row => Array.from(row.querySelectorAll("td")).map(cell => cell.textContent.trim().toLowerCase()));
+function recargarPaginaUnaVez() {
+  // Verificar si la página ya ha sido recargada antes
+  if (!localStorage.getItem('paginaRecargada')) {
+    // Marcar que la página ha sido recargada
+    localStorage.setItem('paginaRecargada', 'true');
+    // Recargar la página
+    location.reload();
+  }
+}
 
-        input.addEventListener("input", function() {
-            const searchText = input.value.trim().toLowerCase();
+// Llamar a la función al cargar la página
+recargarPaginaUnaVez();
+document.addEventListener("DOMContentLoaded", function() {
+    const input = document.getElementById("table-search-users");
+    const rows = document.querySelectorAll("tbody tr");
+    const cellsArray = Array.from(rows).map(row => Array.from(row.querySelectorAll("td")).map(cell => cell.textContent.trim().toLowerCase()));
 
-            rows.forEach((row, index) => {
-                const found = cellsArray[index].some(cellText => cellText.includes(searchText));
-                row.style.display = found ? "table-row" : "none";
-            });
+    // Función para obtener el valor de búsqueda de la URL
+    const getSearchParam = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('search') || "";
+    };
+
+    // Función para establecer el valor de búsqueda en la URL
+    const setSearchParam = (searchText) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('search', searchText);
+        window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+    };
+
+    // Función para aplicar el filtro
+    const applyFilter = (searchText) => {
+        rows.forEach((row, index) => {
+            const found = cellsArray[index].some(cellText => cellText.includes(searchText));
+            row.style.display = found ? "table-row" : "none";
         });
+    };
+
+    // Función para establecer el valor del input y aplicar el filtro
+    const setInputValueAndFilter = () => {
+        const searchText = getSearchParam();
+        input.value = searchText;
+        applyFilter(searchText);
+    };
+
+    // Llamar a la función setInputValueAndFilter al cargar la página o cuando la página se muestra nuevamente desde el historial
+    window.addEventListener('pageshow', setInputValueAndFilter);
+    
+    // Escuchar cambios en el input y actualizar la URL
+    input.addEventListener("input", function() {
+        const searchText = input.value.trim().toLowerCase();
+        setSearchParam(searchText);
+        applyFilter(searchText);
     });
+});
 </script>
