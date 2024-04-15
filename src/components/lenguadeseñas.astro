@@ -108,7 +108,7 @@ document.addEventListener('astro:page-load', () => {
         }
 
         if (searchQuery && searchInput) {
-            searchInput.value = searchQuery;
+            (searchInput as HTMLInputElement).value = searchQuery;
             updateSearchQueryAndURL(searchQuery);
             filterTable(searchQuery);
         }
