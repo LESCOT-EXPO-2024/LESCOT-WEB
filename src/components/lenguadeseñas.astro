@@ -11,6 +11,24 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
   containerClass={`max-w-5xl ${classes.container ?? ''}`}
   bg={bg}
 >
+<!--<div id="alert-additional-content-1" class="p-4 mb-4 text-primary-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-[#2c3b4e] dark:text-primary dark:border-primary" role="alert">
+  <div class="flex items-center">
+    <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+    </svg>
+    <span class="sr-only">Info</span>
+    <h3 class="text-lg font-medium">Alerta de información</h3>
+  </div>
+  <div class="mt-2 mb-4 text-sm">
+    La busqueda sera guardada en tu navegador para poder ser mantenida cuando vuelvas a esta pagina.
+  </div>
+  <div class="flex">
+    <button type="button" class="btn-primary text-black hover:text-black hover:brightness-110 dark:text-white font-medium rounded-lg text-xs px-5 py-3.5 text-center transition-transform duration-300" data-dismiss-target="#alert-additional-content-1" aria-label="Close">
+      Aceptar
+    </button>
+  </div>
+</div> -->
+
   <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
     <div class="pb-4 bg-white dark:bg-dark">
       <label for="table-search" class="sr-only">Buscar</label>
@@ -54,7 +72,7 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
         </thead>
         <tbody id="table-body">
           {paises.map((pais) => (
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr class="bg-white border-b dark:bg-[#2c3b4e] dark:border-gray-500/20 hover:bg-gray-50 dark:hover:bg-[#364f6e]">
               <td class="px-6 py-4">
                 <div class="flex items-center">
                   <img
@@ -78,50 +96,69 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
 </WidgetWrapper>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('astro:page-load', () => {
     const searchInput = document.getElementById('table-search-users');
     const tableBody = document.getElementById('table-body');
 
-    if (searchInput && tableBody) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const searchQuery = urlParams.get('q');
+    function initializeSearch() {
+        let searchQuery = getSearchQueryFromLocalStorage();
 
-        if (searchQuery) {
-            searchInput.value = searchQuery;
-            filterTable(searchQuery);
+        if (!searchQuery) {
+            searchQuery = getSearchQueryFromURL();
         }
 
+        if (searchQuery && searchInput) {
+            searchInput.value = searchQuery;
+            updateSearchQueryAndURL(searchQuery);
+            filterTable(searchQuery);
+        }
+    }
+
+    if (searchInput && tableBody) {
+        initializeSearch();
+
         searchInput.addEventListener('input', function() {
-            const inputValue = searchInput.value.trim();
-            urlParams.set('q', inputValue);
-
-            const newUrl = window.location.pathname + '?' + urlParams.toString();
-            history.replaceState(null, '', newUrl);
-
+            const inputValue = (searchInput as HTMLInputElement).value.trim();
+            updateSearchQueryAndURL(inputValue);
             filterTable(inputValue);
         });
 
         window.addEventListener('popstate', function() {
-            if (searchInput.value !== '') {
-                filterTable(searchInput.value.trim());
-            }
+            initializeSearch();
         });
     }
 
     function filterTable(query) {
-        const rows = tableBody.querySelectorAll('tr');
+        const rows = tableBody ? tableBody.querySelectorAll('tr') : [];
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
-            const country = row.querySelector('td:nth-child(1)').innerText;
-            const language = row.querySelector('td:nth-child(2)').innerText;
+            const country = (row.querySelector('td:nth-child(1)') as HTMLElement)?.innerText?.toLowerCase();
+            const language = (row.querySelector('td:nth-child(2)') as HTMLElement)?.innerText?.toLowerCase();
 
-            if ((country.toLowerCase()).includes(query.toLowerCase()) || (language.toLowerCase()).includes(query.toLowerCase())) {
+            if (country.includes(query.toLowerCase()) || language.includes(query.toLowerCase())) {
                 row.classList.remove('hidden');
             } else {
                 row.classList.add('hidden');
             }
         }
+    }
+
+    function getSearchQueryFromLocalStorage() {
+        return localStorage.getItem('searchQuery');
+    }
+
+    function getSearchQueryFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('q');
+    }
+
+    function updateSearchQueryAndURL(query) {
+        localStorage.setItem('searchQuery', query);
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('q', query);
+        const newUrl = window.location.pathname + '?' + urlParams.toString();
+        history.replaceState(null, '', newUrl);
     }
 });
 </script>
