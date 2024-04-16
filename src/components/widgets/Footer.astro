@@ -23,38 +23,35 @@ export interface Props {
 
 const { socialLinks = [], theme = 'light' } = Astro.props;
 ---
-
-<footer class:list={[{ dark: theme === 'dark' }, 'bg-white shadow dark:bg-dark m-4']}>
-  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <div class="flex justify-center mr-2">
-        <!-- Agrega la clase justify-center para centrar horizontalmente en dispositivos móviles -->
-        <a href={getHomePermalink()} class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-          <Logo />
-        </a>
-      </div>
-      {
-        socialLinks?.length ? (
-          <ul class="flex justify-center mb-4 md:order-1 md:justify-start md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-              <li>
-                <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-6 h-6" />}
-                  <Fragment set:html={text} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : null
-      }
+  <footer class:list={[{ dark: theme === 'dark' },"bg-white shadow dark:bg-dark m-4"]}>
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <div class="flex justify-center mr-2"> <!-- Agrega la clase justify-center para centrar horizontalmente en dispositivos móviles -->
+            <a href={getHomePermalink()} class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+              <Logo />
+            </a>
+          </div>
+              {
+                socialLinks?.length ? (
+                  <ul class="flex justify-center mb-4 md:order-1 md:justify-start md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+                    {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+                      <li>
+                        <a
+                          class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                          aria-label={ariaLabel}
+                          href={href}
+                        >
+                          {icon && <Icon name={icon} class="w-6 h-6" />}
+                          <Fragment set:html={text} />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null
+              }     
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href={getHomePermalink()} class="hover:underline">LESCOT</a>. Todos los derechos reservados.</span>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
-      >© 2024 <a href={getHomePermalink()} class="hover:underline">LESCOT</a>. Todos los derechos reservados.</span
-    >
-  </div>
-</footer>
+  </footer>
+  

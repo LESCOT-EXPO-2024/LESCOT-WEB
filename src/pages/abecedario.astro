@@ -43,7 +43,9 @@ const metadata = {
 
   <Hero2
     tagline="DICCIONARIO"
-    actions={[{ text: 'Comencemos', href: '#señas' }]}
+    actions={[
+      { text: 'Comencemos', href: '#señas' },
+    ]}
     image={{
       src: '~/assets/images/patron_abc.png',
       alt: 'AstroWind Hero Image',
@@ -51,14 +53,13 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Conoce un poco del vocabulario <span class="text-accent highlight">LESCO</span>
+      Conoce un poco del vocabulario <span class="text-accent highlight"
+        >LESCO</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="">
-        Aqui puedes conocer algunos señas básicas de la Lengua de Señas Costarricense <span class="font-semibold"
-          >LESCO</span
-        >, la lengua natural de las personas sordas en Costa Rica.</span
+        Aqui puedes conocer algunos señas básicas de la Lengua de Señas Costarricense <span class="font-semibold">LESCO</span>, la lengua natural de las personas sordas en Costa Rica.</span
       >
     </Fragment>
   </Hero2>
@@ -97,33 +98,33 @@ const metadata = {
 
   <!-- Content Widget **************** -->
   <div id="signals">
-    {
-      signals.map((signal, index) => (
-        <Content
-          key={signal.letter}
-          title={index === 0 ? 'LESCO ABC' : ''}
-          isReversed={index % 2 !== 0}
-          isAfterContent={index > 0 == true}
-          items={[
-            {
-              title: 'Proceso:',
-              description: signal.procedure,
-            },
-          ]}
-          image={{
-            src: signal.imageSrc,
-            alt: signal.imageAlt,
-          }}
-        >
-          <Fragment slot="content">
-            <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">La seña {signal.letter}</h3>
-          </Fragment>
-          <Fragment slot="bg">
-            <div class="absolute inset-0 bg-blue-50 dark:bg-transparent" />
-          </Fragment>
-        </Content>
-      ))
-    }
+    {signals.map((signal, index) => (
+      <Content
+        key={signal.letter}
+        title={index === 0 ? 'LESCO ABC' : ''}
+        isReversed={index % 2 !== 0}
+        isAfterContent={index > 0 == true}
+        items={[
+          {
+            title: 'Proceso:',
+            description: signal.procedure,
+          },
+        ]}
+        image={{
+          src: signal.imageSrc,
+          alt: signal.imageAlt,
+        }}
+      >
+        <Fragment slot="content">
+          <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+            La seña {signal.letter}
+          </h3>
+        </Fragment>
+        <Fragment slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    ))}
   </div>
 
   <!-- Content Widget **************** -->
@@ -191,7 +192,7 @@ const metadata = {
         title: '¿Hay cursos o recursos disponibles para aprender LESCO?',
         description:
           '¡Sí! Existen diferentes opciones para aprender LESCO. Puedes encontrar cursos presenciales en centros o asociaciones de personas sordas, plataformas online con tutoriales y ejercicios, o incluso aplicaciones móviles para practicar.',
-        icon: 'tabler:chevrons-right',
+          icon: 'tabler:chevrons-right',
       },
       {
         title: '¿Existen organizaciones que promuevan el uso de LESCO?',
@@ -199,7 +200,9 @@ const metadata = {
         icon: 'tabler:chevrons-right',
       },
     ]}
-  />
+  >
+
+  </FAQs>
 
   <!-- Steps2 Widget ****************** -->
 
@@ -231,7 +234,10 @@ const metadata = {
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts id="blog" title="Conoce sobre LESCO y nuestro proyecto">
+  <BlogLatestPosts
+    id="blog"
+    title="Conoce sobre LESCO y nuestro proyecto"
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
