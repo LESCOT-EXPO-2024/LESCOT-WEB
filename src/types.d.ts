@@ -249,9 +249,7 @@ export interface Features extends Headline, Widget {
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
 }
-export interface Lenguadesenas extends Headline, Widget {
-
-}
+export interface Lenguadesenas extends Headline, Widget {}
 
 export interface Faqs extends Headline, Widget {
   iconUp?: string;

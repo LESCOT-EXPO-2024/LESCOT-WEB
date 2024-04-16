@@ -35,19 +35,18 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Descubre el fascinante universo de las <span
-        class="text-accent dark:text-white highlight">lenguas de señas</span
-      >
+      Descubre el fascinante universo de las <span class="text-accent dark:text-white highlight">lenguas de señas</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Adéntrate en la rica cultura y tradiciones de las <span class="font-semibold">comunidades sordas </span>alrededor del mundo. Explora la lingüística y gramática de estas lenguas únicas, compuestas por gestos, expresiones faciales y movimientos corporales.
+      Adéntrate en la rica cultura y tradiciones de las <span class="font-semibold">comunidades sordas </span>alrededor
+      del mundo. Explora la lingüística y gramática de estas lenguas únicas, compuestas por gestos, expresiones faciales
+      y movimientos corporales.
     </Fragment>
 
     <Fragment slot="image">
       <YoutubeVideo videoId="q-juc7-tByU" title="Astro just Launched.... Could it be the ultimate web framework?" />
     </Fragment>
-    
   </Hero>
 
   <!-- Features2 Widget ************** -->
@@ -72,15 +71,17 @@ const metadata = {
     ]}
   />
   <Stats
-  stats={[
-    { title: 'Ley de Reconocimiento de Lenguaje de Señas Costarricense (LESCO) como lengua materna', amount: 'No. 9049' },
-    { title: 'Ley de Igualdad de Oportunidades para las Personas con Discapacidad', amount: 'No. 7600' },
-    { title: 'Ley de Reconocimiento y Promoción de la Lengua de Señas Costarricense (LESCO)', amount: 'No. 9822' },
-  ]}
-/>
+    stats={[
+      {
+        title: 'Ley de Reconocimiento de Lenguaje de Señas Costarricense (LESCO) como lengua materna',
+        amount: 'No. 9049',
+      },
+      { title: 'Ley de Igualdad de Oportunidades para las Personas con Discapacidad', amount: 'No. 7600' },
+      { title: 'Ley de Reconocimiento y Promoción de la Lengua de Señas Costarricense (LESCO)', amount: 'No. 9822' },
+    ]}
+  />
 
-<Lenguadesenas/>
-
+  <Lenguadesenas />
 
   <!-- Features2 Widget ************** -->
 
@@ -112,38 +113,35 @@ const metadata = {
     </Fragment>
   </Features2>
 
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-  title="Preguntas frecuentes sobre LESCO"
-  items={[
-    {
-      title: '¿Puedo usar LESCO para comunicarme con personas sordas de otros países?',
-      description:
-        'Las lenguas de señas son idiomas independientes y tienen variaciones regionales.  LESCO es específica de Costa Rica, por lo que puede tener diferencias con las lenguas de señas de otros países. Sin embargo, las lenguas de señas comparten estructuras y gestos básicos que pueden permitir una comunicación inicial.',
-      icon: 'tabler:chevrons-right',
-    },
-    {
-      title: '¿Qué nivel de conocimiento es necesario para aprender LESCO?',
-      description: `Si bien es útil tener algunos conocimientos básicos de gramática y estructura de las lenguas de señas, existen recursos para principiantes que te permiten aprender señas básicas y expresiones cotidianas sin necesidad de un gran bagaje teórico. A medida que avanzas, puedes profundizar en aspectos más complejos de la lengua.`,
-      icon: 'tabler:chevrons-right',
-    },
-    {
-      title: '¿Hay cursos o recursos disponibles para aprender LESCO?',
-      description:
-        '¡Sí! Existen diferentes opciones para aprender LESCO. Puedes encontrar cursos presenciales en centros o asociaciones de personas sordas, plataformas online con tutoriales y ejercicios, o incluso aplicaciones móviles para practicar.',
+    title="Preguntas frecuentes sobre LESCO"
+    items={[
+      {
+        title: '¿Puedo usar LESCO para comunicarme con personas sordas de otros países?',
+        description:
+          'Las lenguas de señas son idiomas independientes y tienen variaciones regionales.  LESCO es específica de Costa Rica, por lo que puede tener diferencias con las lenguas de señas de otros países. Sin embargo, las lenguas de señas comparten estructuras y gestos básicos que pueden permitir una comunicación inicial.',
         icon: 'tabler:chevrons-right',
-    },
-    {
-      title: '¿Existen organizaciones que promuevan el uso de LESCO?',
-      description: `Sí, en Costa Rica existen diversas asociaciones y organizaciones sin fines de lucro que trabajan para promover el uso de LESCO, la inclusión de las personas sordas en la sociedad y la defensa de sus derechos.`,
-      icon: 'tabler:chevrons-right',
-    },
-  ]}
->
-  </FAQs>
-
+      },
+      {
+        title: '¿Qué nivel de conocimiento es necesario para aprender LESCO?',
+        description: `Si bien es útil tener algunos conocimientos básicos de gramática y estructura de las lenguas de señas, existen recursos para principiantes que te permiten aprender señas básicas y expresiones cotidianas sin necesidad de un gran bagaje teórico. A medida que avanzas, puedes profundizar en aspectos más complejos de la lengua.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Hay cursos o recursos disponibles para aprender LESCO?',
+        description:
+          '¡Sí! Existen diferentes opciones para aprender LESCO. Puedes encontrar cursos presenciales en centros o asociaciones de personas sordas, plataformas online con tutoriales y ejercicios, o incluso aplicaciones móviles para practicar.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Existen organizaciones que promuevan el uso de LESCO?',
+        description: `Sí, en Costa Rica existen diversas asociaciones y organizaciones sin fines de lucro que trabajan para promover el uso de LESCO, la inclusión de las personas sordas en la sociedad y la defensa de sus derechos.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  />
 
   <!-- CallToAction Widget *********** -->
 
