@@ -5,7 +5,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-// import PostTags from "~/components/blog/Tags.astro";
+import PostTags from "~/components/blog/Tags.astro";
+import { findTags, findCategories } from '~/utils/blog';
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
 
@@ -20,8 +21,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
+const allCategories = await findCategories();
+const allTags = await findTags();
 
 const metadata = {
   title: `Blog${currentPage > 1 ? ` — Pág. ${currentPage}` : ''}`,
@@ -42,9 +43,7 @@ const metadata = {
     </Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
+      <PostTags tags={allCategories} class="mb-2" title="Busca por categorias:" isCategory />
+      <PostTags tags={allTags}  title="Busca por Tags:" />
   </section>
 </Layout>
