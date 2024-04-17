@@ -13,7 +13,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 //import Stats from '~/components/widgets/Stats.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-
+import Countdown from '~/components/widgets/Countdown.astro';
 const metadata = {
   title: 'LESCOT - LA WEB OFICIAL DEL PROYECTO 2024',
   ignoreTitleTemplate: true,
@@ -136,6 +136,7 @@ const metadata = {
       },
     ]}
   />
+
   <!-- Features Widget *************** 
     <Features
     id="features"
@@ -391,6 +392,11 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>-->
+  <Countdown 
+    title="EXPOTEC 2024"
+    subtitle="Estamos trabajando, solo espera a EXPOTEC 2024..."
+  />
+
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
