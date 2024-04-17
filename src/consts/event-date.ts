@@ -1,4 +1,4 @@
-export const EVENT_TIMESTAMP = 1730246400000 as const
+export const EVENT_TIMESTAMP = 1730379600000 as const
 
 /*
  Mapeo de Abreviaturas de Zonas Horarias
