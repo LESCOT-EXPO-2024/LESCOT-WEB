@@ -74,7 +74,7 @@ const signals: signal[] = [
   },
   {
     letter: 'L',
-    procedure: `Leverage the power of data analytics to gain valuable insights into customer behavior and preferences. <br /> Lead by example and inspire your team to strive for excellence in everything they do. <br /> Listen actively to feedback from customers and employees alike, and use it to drive positive change within your organization. <br /> Light the way forward with a clear vision and a strategic roadmap for achieving your goals.`,
+    procedure: `Para la letra L, llevaremos nuestro dedo meñique, anular y del medio hacia la palma de nuestra mano, y con nuestro dedo índice y pulgar replicaremos una forma de L.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_L copia 2.png',
     imageAlt: 'Imagen seña L',
   },
