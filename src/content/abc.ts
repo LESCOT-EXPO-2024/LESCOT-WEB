@@ -20,7 +20,7 @@ const signals: signal[] = [
   },
   {
     letter: 'C',
-    procedure: `Cultivate customer relationships through personalized interactions and exceptional customer service. <br /> Create compelling content that resonates with your target audience and adds value to their lives. <br /> Capitalize on emerging trends and opportunities to stay ahead of the competition. <br /> Continuously innovate and adapt to meet the evolving needs and preferences of your customers.`,
+    procedure: `Haga la mano en forma de C`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_C copia.png',
     imageAlt: 'Imagen seña C',
   },
