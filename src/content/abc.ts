@@ -62,7 +62,7 @@ const signals: signal[] = [
   },
   {
     letter: 'J',
-    procedure: `Journey with your customers every step of the way, from initial awareness to post-purchase support. <br /> Join the conversation in your industry and engage with influencers and thought leaders to amplify your message. <br /> Justify your customers' trust by delivering on your promises and consistently exceeding their expectations. <br /> Juxtapose your brand against competitors and highlight what makes you the superior choice.`,
+    procedure: `Los pasos para ejecutar la Letra J son los siguientes: Replicar la seña I, y una vez que tengamos la seña I, hacemos el movimiento para "dibujar" una J con el dedo meñique.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_J copia 2.png',
     imageAlt: 'Imagen seña J',
   },
