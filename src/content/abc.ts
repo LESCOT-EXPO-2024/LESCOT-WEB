@@ -158,7 +158,7 @@ const signals: signal[] = [
   },
   {
     letter: 'Y',
-    procedure: `Yearn for excellence in everything you do and strive to exceed expectations at every opportunity. <br /> Yield to the changing needs and preferences of your audience by staying agile and adaptable. <br /> Yoke your brand's success to the success of your customers, and prioritize their needs above all else. <br /> Yell your brand's story from the rooftops and make sure it's heard by everyone who needs to hear it.`,
+    procedure: `Para la letra Y debemos realizar dos simples pasos, <br /> primero se deben bajar tanto el dedo medio como el indice y anular, <br /> luego de eso levantamos el meñique y el pulgar <br /> y asi de sencillo tendremos la letra Y terminada.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_Y copia 2.png',
     imageAlt: 'Imagen seña Y',
   },
