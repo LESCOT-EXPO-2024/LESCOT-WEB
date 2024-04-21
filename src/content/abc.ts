@@ -68,7 +68,7 @@ const signals: signal[] = [
   },
   {
     letter: 'K',
-    procedure: `Keep your finger on the pulse of your industry and anticipate changes and disruptions before they happen. <br /> Kickstart your marketing efforts with a clear strategy and measurable objectives to track your progress. <br /> Kindle excitement and anticipation for your products or services through teaser campaigns and exclusive previews. <br /> Knock down barriers to entry for your customers and make it easy for them to do business with you.`,
+    procedure: `Para ejecutar la letra K, primero llevaremos los dedos meñique y anular hacia la palma de la mano. Después, levantaremos el dedo índice y del medio. Y finalmente llevaremos nuestro dedo pulgar hacia el punto medio entre nuestro dedo índice y del medio.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_K copia.png',
     imageAlt: 'Imagen seña K',
   },
