@@ -8,7 +8,7 @@ interface signal {
 const signals: signal[] = [
   {
     letter: 'A',
-    procedure: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+    procedure: `La letra "A" en Lesco se hace de la siguiente manera:. <br /> Extiende tu mano derecha frente a ti, con la palma hacia abajo y los dedos juntos. <br /> Dobla los dedos hacia abajo, manteniendo el pulgar recto y extendido. <br /> Deja que el dedo índice toque la palma de tu mano, formando una especie de "puente" sobre los otros dedos. <br /> Mantén los otros dedos (medio, anular y meñique) rectos y juntos, sin tocar la palma de la mano. `,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_A copia.png',
     imageAlt: 'Imagen seña A',
   },
