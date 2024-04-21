@@ -1,0 +1,155 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+//import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+//import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import Lenguadesenas from '~/components/lenguadeseñas.astro';
+import YoutubeVideo from '~/components/common/YoutubeVideo.astro';
+
+const metadata = {
+  title: 'Las lenguas de señas',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Un Mundo de Comunicación y Cultura"
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: '@visionlescot',
+        href: 'https://www.instagram.com/visionlescot/',
+        icon: 'tabler:brand-instagram',
+      },
+      { text: 'Conoce más de LESCO', href: '/atlas' },
+    ]}
+  >
+    <Fragment slot="title">
+      Descubre el fascinante universo de las <span class="text-accent dark:text-white highlight">lenguas de señas</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Adéntrate en la rica cultura y tradiciones de las <span class="font-semibold">comunidades sordas </span>alrededor
+      del mundo. Explora la lingüística y gramática de estas lenguas únicas, compuestas por gestos, expresiones faciales
+      y movimientos corporales.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YoutubeVideo videoId="q-juc7-tByU" title="Astro just Launched.... Could it be the ultimate web framework?" />
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="LESCO"
+    subtitle="La Lengua de Señas Costarricense (LESCO) es un idioma vibrante y dinámico que permite a la comunidad sorda de Costa Rica expresarse, interactuar y construir su propia identidad cultural. Al igual que las lenguas habladas, la LESCO posee su propia gramática, sintaxis y vocabulario, transmitidos a través de gestos manuales, expresiones faciales y movimientos corporales. <br>Estas personas celebran año tras año su día, un 21 de setiembre denominado “Día Nacional de la Comunidad Sorda”."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Personas LESCO', amount: '+70K' },
+      { title: 'Personas con trastornos del habla', amount: '30K' },
+      { title: 'Instituciones educativas LESCO', amount: '34' },
+      { title: 'Interpretes LESCO', amount: '200' },
+    ]}
+  />
+  <Stats
+    stats={[
+      {
+        title: 'Ley de Reconocimiento de Lenguaje de Señas Costarricense (LESCO) como lengua materna',
+        amount: 'No. 9049',
+      },
+      { title: 'Ley de Igualdad de Oportunidades para las Personas con Discapacidad', amount: 'No. 7600' },
+      { title: 'Ley de Reconocimiento y Promoción de la Lengua de Señas Costarricense (LESCO)', amount: 'No. 9822' },
+    ]}
+  />
+
+  <Lenguadesenas />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Aspectos fundamentales de las <br>Lenguas de Seña"
+    items={[
+      {
+        title: 'Lenguas naturales completas',
+        description:
+          '‣Las lenguas de señas no son gestos simples o códigos manuales, sino lenguas naturales con gramática, vocabulario y sintaxis propias. <br>‣Poseen una estructura compleja que permite expresar ideas abstractas, narrar historias y debatir cualquier tema.<br>‣Se basan en elementos visuales como la configuración de las manos, la expresión facial, el movimiento corporal y el uso del espacio.',
+        icon: 'flat-color-icons:disclaimer',
+      },
+      {
+        title: 'Diversidad cultural y lingüística',
+        description:
+          '‣Existen alrededor de 7.000 lenguas de señas en el mundo, cada una con su propia historia, evolución y características únicas.<br>‣Las lenguas de señas no son universales, por lo que una persona sorda de un país no entendería automáticamente la lengua de señas de otro país.<br>‣Al igual que las lenguas orales, las lenguas de señas se ven influenciadas por la cultura, la historia y las experiencias de las comunidades que las utilizan.',
+        icon: 'flat-color-icons:globe',
+      },
+      {
+        title: 'Herramienta esencial para la comunicación y la identidad',
+        description:
+          '‣Las lenguas de señas son imprescindibles para la comunicación de las personas sordas, permitiéndoles interactuar entre sí y con el mundo que les rodea.<br>‣Son un elemento fundamental de la identidad cultural de las comunidades sordas, reflejando sus valores, tradiciones y cosmovisión.<br>‣Su acceso y uso garantizan la plena participación de las personas sordas en todos los aspectos de la sociedad, desde la educación y el empleo hasta la cultura y la vida social.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes sobre LESCO"
+    items={[
+      {
+        title: '¿Puedo usar LESCO para comunicarme con personas sordas de otros países?',
+        description:
+          'Las lenguas de señas son idiomas independientes y tienen variaciones regionales.  LESCO es específica de Costa Rica, por lo que puede tener diferencias con las lenguas de señas de otros países. Sin embargo, las lenguas de señas comparten estructuras y gestos básicos que pueden permitir una comunicación inicial.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué nivel de conocimiento es necesario para aprender LESCO?',
+        description: `Si bien es útil tener algunos conocimientos básicos de gramática y estructura de las lenguas de señas, existen recursos para principiantes que te permiten aprender señas básicas y expresiones cotidianas sin necesidad de un gran bagaje teórico. A medida que avanzas, puedes profundizar en aspectos más complejos de la lengua.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Hay cursos o recursos disponibles para aprender LESCO?',
+        description:
+          '¡Sí! Existen diferentes opciones para aprender LESCO. Puedes encontrar cursos presenciales en centros o asociaciones de personas sordas, plataformas online con tutoriales y ejercicios, o incluso aplicaciones móviles para practicar.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Existen organizaciones que promuevan el uso de LESCO?',
+        description: `Sí, en Costa Rica existen diversas asociaciones y organizaciones sin fines de lucro que trabajan para promover el uso de LESCO, la inclusión de las personas sordas en la sociedad y la defensa de sus derechos.`,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction>
+    <Fragment slot="title">EXPOTEC 2023</Fragment>
+
+    <Fragment slot="subtitle" class="shadow-box">
+      RECONOCIDOS POR LA EMPRESA EMERSON COMO MEJOR PROYECTO DE ELECTRÓNICA INDUSTRIAL DÉCIMO.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -19,7 +19,7 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <div class="flex flex-wrap justify-center -m-4 text-center">
+  <div class="flex flex-wrap justify-center -m-4 text-center md:flex-nowrap">
     {
       stats &&
         stats.map(({ amount, title, icon }) => (
@@ -35,7 +35,7 @@ const {
               </div>
             )}
             {title && (
-              <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
+              <div class="text-sm font-bold uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
                 {title}
               </div>
             )}

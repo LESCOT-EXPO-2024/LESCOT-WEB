@@ -28,7 +28,10 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: es
+  defaultLocale: es
+  locales:
+    es: es-ES
+    en: en-US
   textDirection: ltr
 
 apps:

@@ -1,0 +1,46 @@
+---
+---
+
+<select
+id="languagePicker"
+class="px-4 py-2 rounded-md text-sm font-medium bg-white dark:bg-dark text-gray-700 dark:text-gray-300 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-150 ease-in-out"
+data-aw-select-language
+>
+<option value="es" class="py-1">Español</option>
+<option value="en" class="py-1">English</option>
+</select>
+
+
+<script>
+document.addEventListener('astro:page-load', () => {
+    // Función para cambiar el idioma
+    function changeLanguage() {
+    const languagePicker = document.getElementById('languagePicker');
+    const selectedLanguage = languagePicker.value;
+    const currentPage = window.location.pathname;
+
+    // Redirecciona solo si el idioma seleccionado es diferente del idioma actual
+    if ((selectedLanguage === 'en' && !currentPage.startsWith('/en')) || (selectedLanguage === 'es' && currentPage.startsWith('/en'))) {
+        if (selectedLanguage === 'en') {
+            const newIndexURL = currentPage === '/' ? '/en' : '/en' + currentPage;
+            window.location.href = newIndexURL;
+        } else if (selectedLanguage === 'es') {
+            const newURL = currentPage === '/en' ? '/' : currentPage.replace('/en', '');
+            window.location.href = newURL;
+        }
+    }
+}
+
+// Agrega un listener para detectar cambios en el selector de idioma
+const languagePicker = document.getElementById('languagePicker');
+languagePicker.addEventListener('change', changeLanguage);
+
+// Establece la opción seleccionada en función de la página actual
+const currentPage = window.location.pathname;
+if (currentPage.startsWith('/en')) {
+    languagePicker.value = 'en';
+} else {
+    languagePicker.value = 'es';
+}
+});
+</script>

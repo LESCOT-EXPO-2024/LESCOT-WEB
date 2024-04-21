@@ -5,18 +5,16 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 //import Features from '~/components/widgets/Features.astro';
 //import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 //import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
+//import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 //import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+//import Stats from '~/components/widgets/Stats.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Countdown from '~/components/widgets/Countdown.astro';
-
-import antecedentes from '~/content/antecedentes';
+import Header from '~/components/widgets/Header.astro';
 
 const metadata = {
   title: 'LESCOT - LA WEB OFICIAL DEL PROYECTO 2024',
@@ -26,7 +24,24 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
+  <Fragment slot="header">
+   <Header
+      links={[
+        { text: 'Team', href: '/en/equipo' },
+        { text: 'LESCO', href: '/en/abecedario' },
+        { text: 'ABC', href: '/en/lenguadeseña' },
+        { text: 'Contact', href: '/en/contacto' },
+      ]}
+      actions={[
+        {
+          text: 'Bitácora',
+          href: 'https://docs.google.com/document/d/1Hxc8AN_Jazl7ty1PhKYLaaY7R1G3iFdGMxWRrWoW9kk/edit',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
   <Hero
     actions={[
       {
@@ -41,83 +56,23 @@ const metadata = {
     image={{ src: '~/assets/images/patron_index.png', alt: 'LESCOT Hero Image' }}
   >
     <Fragment slot="title">
-      El traductor LESCOT <span class="hidden xl:inline">vuelve en</span>
-      <span class="text-accent highlight"> EXPOTEC 2024</span> + Nuevas novedades
+      LESCOT<span class="hidden xl:inline"> returns at</span>
+      <span class="text-accent highlight"> EXPOTEC 2024</span> + New features
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">LESCOT</span> pretende buscar una solución a las brechas de comunicación presentes entre
-        personas sordas y oyentes.</span
+        <span class="font-semibold">LESCOT</span> aims to find a solution to the communication gaps present between
+        deaf and hearing people.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
-      Utilizando el lenguaje de programación Python junto a un sistema combinado de machine learning.
+      Using the Python programming language together with a combined machine learning system.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
   <Note />
-  <Stats
-  title= '¿Cuantos idiomas hablas?'
-  stats={[
-      {  amount: '33,5%', icon:'tabler:square-rounded-number-1'},
-      {  amount: '53,8%', icon:'tabler:square-rounded-number-2' },
-      {  amount: '10,1%', icon:'tabler:square-rounded-number-3' },
-      {  amount: '1,9%', icon:'tabler:square-rounded-number-4' },
-      {  amount: '0,6%', icon:'tabler:square-rounded-number-5' },
-    ]}
-  />
-
-  <Stats
-  title= '¿Es el LESCO uno de esos idiomas/lenguas?'
-
-    stats={[
-      { title: 'SI', amount: '11,4%' },
-      { title: 'NO', amount: '88,6%' },
-    ]}
-  />
-    <!-- Content Widget **************** -->
-    <div id="antecedentes">
-    {
-    antecedentes.map((antecedente, index) => (
-      <Content
-      id="antecedentes"
-      title={index === 0 ? 'Antecedentes' : ''}
-      subtitle={index === 0 ? 'Descrubre algunos de los otros traductores de señas que existen en el mundo.' : ''}
-      isReversed
-      isAfterContent={index > 0 == true}
-      items={[
-        {
-          title: 'Descripcion:',
-          description: antecedente.descripcion,
-        },
-      ]}
-      image={{
-        src: antecedente.imageSrc,
-        alt: antecedente.imageAlt,
-      }}
-      callToAction={{
-        target: '_blank',
-        text: 'Visita a ' + antecedente.titulo,
-        icon: 'tabler:chevron-right',
-        href: antecedente.link,
-      }}
-    >
-      <Fragment slot="content">
-        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-          {antecedente.titulo} <br /><span class="text-2xl">{antecedente.subtitulo}</span>
-        </h3>
-      </Fragment>
-
-      <Fragment slot="bg">
-        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-      </Fragment>
-    </Content>
-    ))
-    }
-  </div>
-
   <Steps2
     id="metas"
     title="Nuestras metas"
@@ -131,7 +86,7 @@ const metadata = {
       {
         title: 'Analizar',
         description:
-          'las brechas de comunicación entre sordos y oyentes en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre las personas mediante la creación de un formulario.',
+          'las brechas de comunicación en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre las personas mediante la creación de un formulario.',
         icon: 'tabler:chart-histogram',
       },
       {
@@ -143,7 +98,7 @@ const metadata = {
       {
         title: 'Desarrollar',
         description:
-          'un algoritmo de reconocimiento de gestos de LESCO preciso y confiable, que permita al “traductor” servir como interprete dando las señas con precisión y generar una traducción coherente.',
+          'un algoritmo de reconocimiento de gestos de LESCO preciso y confiable, que permita al “traductor” interpretar las señas con precisión y generar una traducción coherente.',
         icon: 'tabler:brand-python',
       },
       {
@@ -153,16 +108,6 @@ const metadata = {
         icon: 'tabler:certificate-2',
       },
     ]}
-  />
-  <Features3
-    id="descripcion general"
-    title="Descripción general"
-    subtitle="LESCOT pretende buscar una solución a las brechas de comunicación presentes entre personas sordas y oyentes, mediante la adaptabilidad de un “traductor” de LESCO utilizando el lenguaje de programación Python junto a un sistema combinado de visión artificial, facilitando las interacciones entre personas sordas y oyentes, además de apoyar la Ley No. 9822."
-    tagline="Solución a la inclusividad"
-    image={{
-      src: '~/assets/images/BLOG3.png',
-      alt: 'LESCOT Image',
-    }}
   />
   <!-- Brands Widget ****************** -->
 
@@ -256,8 +201,118 @@ const metadata = {
       },
     ]}
   />-->
+  <!-- Content Widget **************** 
 
+  <!-- Content Widget **************** 
+  
+  <Content
+  isReversed
+  tagline="Antecedentes"
+  title="¡Aqui puedes conocer sobre otros Traductores de LESCO en Costa Rica!"
+  items={[
+    {
+        title: 'Interpretación de LESCO',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+      },
+      {
+        title: 'Styled using Tailwind CSS',
+        description:
+          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Interpretación LESCO</h3>
+      Son servicios de interpretación LESCO para actividades. Tienen intérpretes LESCO que hablan distintos idiomas, por lo que pueden hacer la interpretación desde lenguaje de señas sin problema alguno. Tienen equipos de interpretación simultánea que pueden complementar el servicio. 
+    </Fragment>
 
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'High level of customization',
+        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+      },
+      {
+        title: 'Multiple layout possibilities',
+        description:
+          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+      },
+      {
+        title: 'Fully responsive design',
+        description:
+          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+      },
+      {
+        title: 'Integration of media',
+        description:
+          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>-->
+
+  <!-- Content Widget **************** 
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced user engagement',
+        description:
+          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+      },
+      {
+        title: 'Continuous improvement',
+        description:
+          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+      },
+      {
+        title: 'Time and resource efficiency',
+        description:
+          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+      },
+      {
+        title: 'Community support',
+        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>-->
 
   <!-- Steps Widget ****************** 
 
