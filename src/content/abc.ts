@@ -14,7 +14,7 @@ const signals: signal[] = [
   },
   {
     letter: 'B',
-    procedure: `Boost your brand's online presence with a comprehensive social media strategy tailored to your business goals. <br /> Build meaningful connections with your audience through engaging content and interactive campaigns. <br /> Bolster brand loyalty by fostering community engagement and responding promptly to customer inquiries and feedback. <br /> Be visible where your audience spends their time online, and leverage analytics to refine your approach.`,
+    procedure: ` La letra "B" en Lesco se hace de la siguiente manera:. <br /> Comienza extendiendo tu mano derecha con los dedos juntos. <br /> Doble ligeramente el dedo pulgar en direccion hacia el dedo meñique. <br /> Mantenja los demas dedos levantados.`
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_B copia 2.png',
     imageAlt: 'Imagen seña B',
   },
