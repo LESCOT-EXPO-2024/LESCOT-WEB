@@ -32,7 +32,7 @@ const signals: signal[] = [
   },
   {
     letter: 'E',
-    procedure: `Elevate your brand's visibility and credibility with strategic partnerships and collaborations. <br /> Establish yourself as an authority in your industry by sharing valuable insights and thought leadership content. <br /> Engage with your audience authentically and build trust through transparent communication and consistent delivery of promises. <br /> Embrace feedback as an opportunity for growth and continuous improvement.`,
+    procedure: `La letra "E" en Lesco se hace de la siguiente manera:. <br /> Extiende tu mano derecha frente a ti, con la palma hacia al frente y los dedos juntos. <br /> Bajamos cuidadosamente y no por completo los dedos indice, el del medio, el anular y el meñique. <br /> El dedo pulgar tambien tiene que doblarse a la mitad no por completo.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_E copia.png',
     imageAlt: 'Imagen seña E',
   },
