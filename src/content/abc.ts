@@ -20,7 +20,7 @@ const signals: signal[] = [
   },
   {
     letter: 'C',
-    procedure: `Cultivate customer relationships through personalized interactions and exceptional customer service. <br /> Create compelling content that resonates with your target audience and adds value to their lives. <br /> Capitalize on emerging trends and opportunities to stay ahead of the competition. <br /> Continuously innovate and adapt to meet the evolving needs and preferences of your customers.`,
+    procedure: `La letra "c" en Lesco se hace de la siguiente manera:  <br /> Extiende tu mano derecha frente a ti, con la palma hacia abajo y los dedos juntos. <br /> Curva ligeramente los dedos hacia abajo, formando una leve concavidad en la parte superior de la mano. <br /> Mantén el pulgar recto y ligeramente separado del resto de los dedos.<br /> La forma resultante debe parecerse a la letra "C" .`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_C copia.png',
     imageAlt: 'Imagen seña C',
   },
