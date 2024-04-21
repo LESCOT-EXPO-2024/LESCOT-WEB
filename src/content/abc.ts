@@ -14,7 +14,7 @@ const signals: signal[] = [
   },
   {
     letter: 'B',
-    procedure: `La letra "B" en Lesco se hace de la siguiente manera:. <br /> Comienza extendiendo tu mano derecha con los dedos juntos. <br /> Doble ligeramente el dedo pulgar en direccion hacia el dedo meñique. <br /> Mantenja los demas dedos levantados.`
+    procedure: `La letra "B" en Lesco se hace de la siguiente manera:. <br /> Comienza extendiendo tu mano derecha con los dedos juntos. <br /> Doble ligeramente el dedo pulgar en direccion hacia el dedo meñique. <br /> Mantenja los demas dedos levantados.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_B copia 2.png',
     imageAlt: 'Imagen seña B',
   },
