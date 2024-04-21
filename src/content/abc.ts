@@ -116,7 +116,7 @@ const signals: signal[] = [
   },
   {
     letter: 'R',
-    procedure: `Reimagine your brand's identity and positioning to better align with the evolving needs and preferences of your audience. <br /> Reinforce your brand message consistently across all touchpoints to build recognition and trust. <br /> Respond promptly and effectively to customer feedback and inquiries to demonstrate your commitment to customer satisfaction. <br /> Rally your team around a shared vision and values to foster a culture of collaboration and innovation.`,
+    procedure: `Para realizar la letra R lo pirmero que debemos de hacer es <br />  bajar nuesto meñique y juntar nuestros dedos pulgar y anular . <br /> logrando que las puntas de ambos dedos se toquen entre si,  <br />  luego de eso debemos levantar nuestros dedos tanto indice como corazon y cruzalos dejando el medio por encima del otro .`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_R copia.png',
     imageAlt: 'Imagen seña R',
   },
