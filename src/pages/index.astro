@@ -6,7 +6,7 @@ import Note from '~/components/widgets/Note.astro';
 //import Features from '~/components/widgets/Features.astro';
 //import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-//import Steps from '~/components/widgets/Steps.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -165,8 +165,41 @@ const metadata = {
       alt: 'LESCOT Image',
     }}
   />
-  <!-- Brands Widget ****************** -->
+  
+    <!-- Steps Widget ****************** -->
+    <Steps
+    title="Conoce nuestro módulo LESCOT"
+    items={[
+      {
+        title: 'Pantalla interactiva',
+        description:
+          '¡Utiliza la pantalla táctil de nuestro módulo para explorar! Puedes ver las señas y su traducción en tiempo real.',
+        icon: 'tabler:screen-share',
+      },
+      {
+        title: 'Cámara',
+        description:
+          "Gracias a la cámara del módulo LESCOT, tus señas serán captadas en tiempo real.",
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Sistema de sonido',
+        description:
+          '¿Te da pereza leer? No te preocupes, nuestro módulo LESCOT cuenta con un sistema de sonido que te ayudará a entender las señas.',
+        icon: 'tabler:volume',
+      },
+      {
+        title: '¡Pruébalo!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB/assets/144076399/00a22f10-32da-49b3-9f79-1b4857a941c1',
+      alt:'Imagen módulo LESCOT',
+    }}
+  />
 
+  <!-- Brands Widget ****************** -->
   <Brands
     title="Patrocinadores y Colaboladores"
     subtitle="Agradecemos a cada uno de ellos por el apoyo continuo a LESCOT."
@@ -256,42 +289,6 @@ const metadata = {
         icon: 'tabler:bulb',
       },
     ]}
-  />-->
-
-
-
-  <!-- Steps Widget ****************** 
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
   />-->
 
   <!-- Features2 Widget ************** 
