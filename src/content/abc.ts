@@ -146,7 +146,7 @@ const signals: signal[] = [
   },
   {
     letter: 'W',
-    procedure: `Win the hearts and minds of your audience with authentic storytelling and compelling brand narratives. <br /> Wow your customers with exceptional products and services that exceed their expectations. <br /> Work collaboratively with your team and partners to achieve shared goals and objectives. <br /> Watch your brand soar to new heights as you consistently deliver value and delight to your customers.`,
+    procedure: ` Para esta letra debemos de iniciar bajando <br /> nuestro meñique y pulgar juntando la punta de ellos entre si, <br /> luego de eso dejamos arriba los otros tres dedos restantes,sin embargo, <br /> debemos de tener cuidado ya que estos tienen que estar separados entre ellos dormando asi una W como la del abecedario con los dedos.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_W copia 2.png',
     imageAlt: 'Imagen seña W',
   },
