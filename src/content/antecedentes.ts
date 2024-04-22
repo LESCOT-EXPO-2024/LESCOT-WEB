@@ -36,7 +36,7 @@ const antecedentes: antecedente[] = [
         titulo: 'HETAH',
         subtitulo: '@fundacionhetah',
         link: 'https://hetah.net/',
-        descripcion: 'Descripcion',
+        descripcion: 'La fundación hetah se ha encargado de crear herramientas para enfrentar los desafíos que presenta la humanidad, una de estas herramientas es un traductor de lenguaje de señas a avatar, ya sea en 2D o 3D. Con el avatar 2D han logrado traducir 884 señas de diferentes lenguajes de señas de distintos países, con el 3D han logrado traducir 1365 señas. De igual manera, este traductor se encuentra en desarrollo, por lo que aún le faltan muchas cosas por mejorar.',
         imageSrc: 'https://s3.amazonaws.com/ideame-images/resizers/47941_686_387_fill_undefined_projectImageOriginalUrl.jpeg',
         imageAlt: 'HETAH'
     },
@@ -44,7 +44,7 @@ const antecedentes: antecedente[] = [
         titulo: 'Sign-Speak',
         subtitulo: '@Sign_Speak_',
         link: 'https://www.sign-speak.com/',
-        descripcion: 'Descripcion',
+        descripcion: 'Sign Speak es una aplicación móvil que utiliza inteligencia artificial para traducir el lenguaje de señas al lenguaje hablado. La aplicación fue creada por Yamilet Payano, una emprendedora sorda, con el objetivo de hacer la comunicación más accesible para las personas sordas o con problemas de audición. La aplicación utiliza una combinación de visión artificial y aprendizaje automático para identificar y traducir gestos en lenguaje de señas. El usuario simplemente utiliza la cámara del dispositivo y la aplicación mostrará el texto correspondiente en la pantalla, de igual manera se encuentra en desarrollo.',
         imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEpwvjuCiCE54hT38vXKZy3pGFD6gbNbG4W9nHmiKT_Q&s',
         imageAlt: 'SIGN SPEAK'
     },
