@@ -26,7 +26,7 @@ const signals: signal[] = [
   },
   {
     letter: 'D',
-    procedure: `Drive growth and profitability through data-driven decision-making and strategic planning. <br /> Develop a deep understanding of your market, competitors, and customers to identify opportunities for expansion. <br /> Deliver exceptional products and services that exceed customer expectations and drive word-of-mouth referrals. <br /> Differentiate your brand by highlighting what sets you apart from the competition.`,
+    procedure: `La letra "D" en Lesco se hace de la siguiente manera:. <br /> Comienza extendiendo tu mano derecha con los dedos juntos y la palma hacia adelante.<br /> Bajamos el dedo del centro,el anular y el meñique. <br /> Mantemos el dedo indice levantado.<br /> Doblamos el dedo pulgar ligeramente hacia el dedo del medio.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_D copia 2.png',
     imageAlt: 'Imagen seña D',
   },
