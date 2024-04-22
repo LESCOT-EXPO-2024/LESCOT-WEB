@@ -35,7 +35,7 @@ const antecedentes: antecedente[] = [
     {
         titulo: 'HETAH',
         subtitulo: '@fundacionhetah',
-        link: 'antecedentes',
+        link: 'https://hetah.net/',
         descripcion: 'Descripcion',
         imageSrc: 'https://s3.amazonaws.com/ideame-images/resizers/47941_686_387_fill_undefined_projectImageOriginalUrl.jpeg',
         imageAlt: 'HETAH'
