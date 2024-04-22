@@ -140,7 +140,7 @@ const signals: signal[] = [
   },
   {
     letter: 'V',
-    procedure: `Visualize success and chart a course towards achieving your goals with a clear and actionable plan. <br /> Venture into new markets and opportunities with confidence, backed by thorough research and analysis. <br /> Validate your ideas and assumptions through testing and experimentation to mitigate risk. <br /> Value your customers' feedback and use it to continuously improve and refine your products and services.`,
+    procedure: ` La seña de la letra v se realiza de manera similar a la U ya que, al igual que en la anterior,  <br />  debemos bajar nuesto meñique y juntar nuestros dedos pulgar y anular . <br /> logrando que las puntas de ambos dedos se toquen entre si, sin embargo,  <br />  la diferencia esta en que al levantar nuestro dedos indice como corazon tendremos que separarlos para realizar la seña de forma correcta.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_V copia.png',
     imageAlt: 'Imagen seña V',
   },
