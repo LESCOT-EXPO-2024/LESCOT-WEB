@@ -134,7 +134,7 @@ const signals: signal[] = [
   },
   {
     letter: 'U',
-    procedure: `Unleash the full potential of your brand by tapping into the passions and aspirations of your audience. <br /> Understand the needs and preferences of your customers through in-depth market research and analysis. <br /> Uphold the highest standards of quality and integrity in everything you do, from product development to customer service. <br /> Utilize technology to streamline your operations and deliver exceptional experiences to your customers.`,
+    procedure: `La letra U es similar a la R a la hora de hacerla, primero debemos de  <br />  bajar nuesto meñique y juntar nuestros dedos pulgar y anular <br /> logrando que las puntas de ambos dedos se toquen entre si,  <br />  para terminar debemos levantar nuestros dedos tanto indice como corazon y asi tendremos la letra terminada .`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_U copia 2.png',
     imageAlt: 'Imagen seña U',
   },
