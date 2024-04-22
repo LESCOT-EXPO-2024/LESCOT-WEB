@@ -122,7 +122,7 @@ const signals: signal[] = [
   },
   {
     letter: 'S',
-    procedure: `Strengthen your brand's reputation and credibility through positive customer experiences and word-of-mouth referrals. <br /> Streamline your sales and marketing processes to maximize efficiency and minimize waste. <br /> Showcase your unique value proposition through compelling storytelling and persuasive messaging. <br /> Stay agile and adaptable in the face of changing market conditions and emerging trends.`,
+    procedure: ` Realizar la seña S es muy facil <br /> Solo debemos de bajar todos nuestros dedos a excepcion del pulgar, <br /> la punta de los dedos tocando la palma de la mano, <br /> por ultimo el pulgar debe de estar poscicionado por encima de los dedos ya flexionados.`,
     imageSrc: '~/assets/images/abecedario/Abecedario LESCO Ilustraciones_S copia 2.png',
     imageAlt: 'Imagen seña S',
   },
