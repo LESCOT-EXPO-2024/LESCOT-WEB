@@ -198,6 +198,40 @@ const metadata = {
       alt:'Imagen módulo LESCOT',
     }}
   />
+      <!-- Steps Widget ****************** -->
+      <Steps
+      title="JETSON ORIN NANO"
+      isReversed
+      items={[
+        {
+          title: 'Rendimiento de la IA',
+          description:
+            '40 FLOPS (cantidad de operaciones de punto flotante por segundo). Es una medida de la capacidad de la unidad para realizar cálculos necesarios para ejecutar algoritmos de IA.',
+          icon: 'tabler:binary',
+        },
+        {
+          title: 'Unidad de Procesamiento Gráfico y Núcleo Tensor',
+          description:
+            "1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores; dedicada ampliamente a tareas de inteligencia artificial y redes neuronales debido a su capacidad para realizar cálculos en paralelo.",
+          icon: 'tabler:cpu',
+        },
+        {
+          title: 'Frecuencia Máxima de la GPU',
+          description:
+            '625MHz. Es la velocidad máxima a la que puede operar la GPU, medida en GHz (gigahercios).',
+          icon: 'tabler:rss',
+        },
+        {
+          title: '¡Otros datos!',
+          description: '6-core Arm® Cortex®-A78AE v8.2 64-bit 1.5 GHz / 8GB LPDDR(Low-Power DDR) / Video encode de 1080p30 / CSI Camera	/ Power 7W - 15W',
+          icon: 'tabler:bolt',
+        },
+      ]}
+      image={{
+        src: 'https://cdn0637.cdn4s.com/media/jetson%20minh%20%C4%91%E1%BB%A9c/nvidia%20jetson%20orin%20nano%20developer%20kit/nvidia-jetson-orin-nano-developer-kit-details-mlab-com-vn.jpg',
+        alt:'Imagen JETSON ORIN',
+      }}
+    />
 
   <!-- Brands Widget ****************** -->
   <Brands
