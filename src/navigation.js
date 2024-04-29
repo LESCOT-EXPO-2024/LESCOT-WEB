@@ -103,6 +103,7 @@ export const headerData = {
     //  },
     {
       text: 'Blog',
+      href: getBlogPermalink(),
       links: [
         {
           text: 'Lista de blog',

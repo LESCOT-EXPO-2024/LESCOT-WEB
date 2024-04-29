@@ -50,15 +50,62 @@ const metadata = {
         <span class="font-semibold">LESCOT</span> pretende buscar una solución a las brechas de comunicación presentes entre
         personas sordas y oyentes.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
-      Utilizando el lenguaje de programación Python junto a un sistema combinado de machine learning.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
-
   <Note />
+  <Features3
+  id="descripcion-general"
+  title="Descripción general"
+  subtitle="LESCOT pretende buscar una solución a las brechas de comunicación presentes entre personas sordas y oyentes, mediante la adaptabilidad de un “traductor” de LESCO utilizando el lenguaje de programación Python junto a un sistema combinado de visión artificial, facilitando las interacciones entre personas sordas y oyentes, además de apoyar la Ley No. 9822, No. 9049 y No. 7600."
+  tagline="Solución a la inclusividad"
+  image={{
+    src: 'https://nvidianews.nvidia.com/_gallery/get_file/?file_id=6189e835b3aed353997db7f8',
+    alt: 'LESCOT Image',
+  }}
+/>
+<!-- METAS ******************* -->
+  <Steps2
+    id="metas"
+    title="Nuestras metas"
+    subtitle="Proponer una solución a las brechas de comunicación en la vida cotidiana de las personas con discapacidad auditiva con el desarollo de un “traductor” de LESCO (Lenguaje de Señas Costarricense)."
+    isReversed={true}
+    callToAction={{
+      text: 'Conoce más de nosotros',
+      href: '/equipo',
+    }}
+    items={[
+      {
+        title: 'Analizar',
+        description:
+          'Las brechas de comunicación entre sordos y oyentes en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre estas personas mediante la creación de un formulario.',
+        icon: 'tabler:chart-histogram',
+      },
+      {
+        title: 'Almacenar',
+        description:
+          'Una base de datos que contenga las señas para el <span class="italic">"machine learning"</span> y su correcto reconocimiento e interpretación a texto.',
+        icon: 'tabler:folders',
+      },
+      {
+        title: 'Desarrollar',
+        description:
+          'Un algoritmo de reconocimiento preciso y confiable de gestos LESCO, permitiendo al traductor desempeñarse como intérprete, brindando señas fieles y generando traducciones coherentes.',
+        icon: 'tabler:brand-python',
+      },
+      {
+        title: 'Implementar',
+        description:
+          'El módulo LESCOT en los diferentes puntos de interes o contacto de manera que pueda extenderse hacia el publico dirigido.',
+        icon: 'tabler:certificate-2',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
   <Stats
+  id="Stats"
   title= '¿Cuantos idiomas hablas?'
   stats={[
       {  amount: '33,5%', icon:'tabler:square-rounded-number-1'},
@@ -77,8 +124,9 @@ const metadata = {
       { title: 'NO', amount: '88,6%' },
     ]}
   />
-    <!-- Content Widget **************** -->
-    <div id="antecedentes">
+
+  <!-- antecedentes Widget **************** -->
+  <div id="antecedentes">
     {
     antecedentes.map((antecedente, index) => (
       <Content
@@ -119,52 +167,6 @@ const metadata = {
     }
   </div>
 
-  <Steps2
-    id="metas"
-    title="Nuestras metas"
-    subtitle="Proponer una solución a las brechas de comunicación en la vida cotidiana de las personas con discapacidad auditiva con el desarollo de un “traductor” de LESCO (Lenguaje de Señas Costarricense)."
-    isReversed={true}
-    callToAction={{
-      text: 'Conoce más de nosotros',
-      href: '/equipo',
-    }}
-    items={[
-      {
-        title: 'Analizar',
-        description:
-          'Las brechas de comunicación entre sordos y oyentes en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre estas personas mediante la creación de un formulario.',
-        icon: 'tabler:chart-histogram',
-      },
-      {
-        title: 'Almacenar',
-        description:
-          'Una base de datos que contenga las señas para el <span class="italic">"machine learning"</span> y su correcto reconocimiento e interpretación a texto.',
-        icon: 'tabler:folders',
-      },
-      {
-        title: 'Desarrollar',
-        description:
-          'Un algoritmo de reconocimiento preciso y confiable de gestos LESCO, permitiendo al traductor desempeñarse como intérprete, brindando señas fieles y generando traducciones coherentes.',
-        icon: 'tabler:brand-python',
-      },
-      {
-        title: 'Implementar',
-        description:
-          'El módulo LESCOT en los diferentes puntos de interes o contacto de manera que pueda extenderse hacia el publico dirigido.',
-        icon: 'tabler:certificate-2',
-      },
-    ]}
-  />
-  <Features3
-    id="descripcion general"
-    title="Descripción general"
-    subtitle="LESCOT pretende buscar una solución a las brechas de comunicación presentes entre personas sordas y oyentes, mediante la adaptabilidad de un “traductor” de LESCO utilizando el lenguaje de programación Python junto a un sistema combinado de visión artificial, facilitando las interacciones entre personas sordas y oyentes, además de apoyar la Ley No. 9822."
-    tagline="Solución a la inclusividad"
-    image={{
-      src: 'https://nvidianews.nvidia.com/_gallery/get_file/?file_id=6189e835b3aed353997db7f8',
-      alt: 'LESCOT Image',
-    }}
-  />
   
     <!-- Steps Widget ****************** -->
     <Steps

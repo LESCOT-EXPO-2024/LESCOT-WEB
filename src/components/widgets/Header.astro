@@ -8,7 +8,6 @@ import Button from '~/components/ui/Button.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
-//import LanguagePicker from '~/components/common/LanguagePicker.astro';
 
 interface Link {
   text?: string;
@@ -132,7 +131,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
         </div>
-        <!--<LanguagePicker /> -->
 
 
         {

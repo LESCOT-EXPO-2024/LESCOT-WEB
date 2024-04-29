@@ -1,43 +1,30 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
-//import Pricing from '~/components/widgets/Pricing.astro';
 import signals from '~/content/abc';
 
-import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+import cenareclogo from '~/assets/images/cenarec-logo.png';
+import handonlesco from '~/assets/images/hand-on-lesco.png';
+
+const cenareclink = 'https://lesco.cenarec.go.cr/index.php/diccionariolesco';
+const handonlink = 'https://diccionario.handsonlesco.com/';
 const metadata = {
   title: 'Vocabulario LESCO',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="header">
-    <Header
-      {...headerData}
-      actions={[
-        {
-          variant: 'secondary',
-          text: 'Dicc. CENAREC',
-          href: 'https://lesco.cenarec.go.cr/index.php/diccionariolesco',
-        },
-        {
-          variant: 'primary',
-          text: 'Dicc. HANDS-ON LESCO',
-          href: 'https://diccionario.handsonlesco.com/',
-        },
-      ]}
-      isSticky
-      showToggleTheme
-    />
-  </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
@@ -128,48 +115,23 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- Pricing Widget ******************* 
+  <!-- Pricing Widget ******************* -->
 
-  <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
-      },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
-      },
-    ]}
-  />-->
+  <CallToAction
+    id="diccionarios"
+    title="¡Accede a otros diccionarios!"
+    subtitle="Mira más señas">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={cenareclink}>
+        <Image src={cenareclogo} alt="CENAREC LOGO" width={300} />
+        <p class="justify-center text-center font-light">CENAREC</p>
+      </Button>
+      <Button variant="link" href={handonlink}>
+        <Image src={handonlesco} alt="HANDSONLESCO LOGO" width={300} />
+        <p class="justify-center text-center font-light">HANDS-ON LESCO</p>
+      </Button>
+    </div>
+  </CallToAction>
 
   <!-- FAQs Widget ******************* -->
 
@@ -208,7 +170,7 @@ const metadata = {
     subtitle="¿Tiene preguntas? No dude en contactarnos utilizando el siguiente formulario. ¡Estamos aquí para ayudar!"
     callToAction={{
       text: 'Contáctanos',
-      href: '/contact',
+      href: '/contacto',
     }}
     items={[
       {
