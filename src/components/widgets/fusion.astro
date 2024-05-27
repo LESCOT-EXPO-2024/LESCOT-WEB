@@ -1,0 +1,28 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+    <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline} />
+
+    <iframe 
+    src="https://gmail3384592.autodesk360.com/shares/public/SH30dd5QT870c25f12fc5916ee82cad3d654?mode=embed" 
+    width="1024" 
+    height="768" 
+    allowfullscreen="true" 
+    frameborder="0" 
+    class="w-full h-[75vh] border-0"
+    ></iframe>
+</WidgetWrapper>
