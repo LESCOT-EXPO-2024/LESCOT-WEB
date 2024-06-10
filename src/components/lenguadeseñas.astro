@@ -4,55 +4,70 @@ import paises from '~/content/lenguaseñas';
 import type { Lenguadesenas } from '~/types';
 
 const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
+const continentes = [...new Set(paises.map((pais) => pais.continente))];
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes.container ?? ''}`} bg={bg}>
-  <!--<div id="alert-additional-content-1" class="p-4 mb-4 text-primary-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-[#2c3b4e] dark:text-primary dark:border-primary" role="alert">
-  <div class="flex items-center">
-    <svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-    </svg>
-    <span class="sr-only">Info</span>
-    <h3 class="text-lg font-medium">Alerta de información</h3>
-  </div>
-  <div class="mt-2 mb-4 text-sm">
-    La busqueda sera guardada en tu navegador para poder ser mantenida cuando vuelvas a esta pagina.
-  </div>
-  <div class="flex">
-    <button type="button" class="btn-primary text-black hover:text-black hover:brightness-110 dark:text-white font-medium rounded-lg text-xs px-5 py-3.5 text-center transition-transform duration-300" data-dismiss-target="#alert-additional-content-1" aria-label="Close">
-      Aceptar
-    </button>
-  </div>
-</div> -->
-
-  <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
-    <div class="pb-4 bg-white dark:bg-dark">
+  <div class="pb-4 bg-white dark:bg-dark flex items-center justify-between">
+    <div class="relative flex-grow mr-4">
       <label for="table-search" class="sr-only">Buscar</label>
-      <div class="relative">
-        <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-          <svg
-            class="w-4 h-4 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
-          </svg>
-        </div>
-        <input
-          type="text"
-          id="table-search-users"
-          class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Buscar por país o continente lengua de señas (si el buscador no funciona, recarga la pagina)"
-        />
+      <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg
+          class="w-4 h-4 text-gray-500 dark:text-gray-400"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+        </svg>
       </div>
+      <input
+        type="text"
+        id="table-search-users"
+        class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full bg-gray-50 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary"
+        placeholder="Buscar por país o continente lengua de señas (si el buscador no funciona, recarga la pagina)"
+      />
     </div>
+    <div class="relative w-64">
+      <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg           
+        class="w-4 h-4 text-gray-500 dark:text-gray-400"
+        aria-hidden="true" 
+        viewBox="0 0 20 20" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier"> 
+            <path d="M21 6H19M21 12H16M21 18H16M7 20V13.5612C7 13.3532 7 13.2492 6.97958 13.1497C6.96147 13.0615 6.93151 12.9761 6.89052 12.8958C6.84431 12.8054 6.77934 12.7242 6.64939 12.5617L3.35061 8.43826C3.22066 8.27583 3.15569 8.19461 3.10948 8.10417C3.06849 8.02393 3.03853 7.93852 3.02042 7.85026C3 7.75078 3 7.64677 3 7.43875V5.6C3 5.03995 3 4.75992 3.10899 4.54601C3.20487 4.35785 3.35785 4.20487 3.54601 4.10899C3.75992 4 4.03995 4 4.6 4H13.4C13.9601 4 14.2401 4 14.454 4.10899C14.6422 4.20487 14.7951 4.35785 14.891 4.54601C15 4.75992 15 5.03995 15 5.6V7.43875C15 7.64677 15 7.75078 14.9796 7.85026C14.9615 7.93852 14.9315 8.02393 14.8905 8.10417C14.8443 8.19461 14.7793 8.27583 14.6494 8.43826L11.3506 12.5617C11.2207 12.7242 11.1557 12.8054 11.1095 12.8958C11.0685 12.9761 11.0385 13.0615 11.0204 13.1497C11 13.2492 11 13.3532 11 13.5612V17L7 20Z" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"></path> 
+          </g>
+        </svg>
+      </div>
+      
+      <label for="continent-filter" class="sr-only">Filtrar por continente</label>
+      <select
+        id="continent-filter"
+        class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-full bg-gray-50 focus:ring-primary focus:border-primary dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary dark:focus:border-primary">
+        <option value="">Todos los continentes</option>
+        {
+          continentes.map((continente) => (
+            <option value={continente}>{continente}</option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+  <div class="overflow-x-auto shadow-md sm:rounded-lg bg-light">
     <div class="overflow-x-auto">
       <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -91,6 +106,7 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
 <script>
   document.addEventListener('astro:page-load', () => {
     const searchInput = document.getElementById('table-search-users');
+    const continentFilter = document.getElementById('continent-filter');
     const tableBody = document.getElementById('table-body');
 
     function initializeSearch() {
@@ -103,17 +119,21 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
       if (searchQuery && searchInput) {
         (searchInput as HTMLInputElement).value = searchQuery;
         updateSearchQueryAndURL(searchQuery);
-        filterTable(searchQuery);
+        filterTable(searchQuery, continentFilter.value);
       }
     }
 
-    if (searchInput && tableBody) {
+    if (searchInput && tableBody && continentFilter) {
       initializeSearch();
 
       searchInput.addEventListener('input', function () {
         const inputValue = (searchInput as HTMLInputElement).value.trim();
         updateSearchQueryAndURL(inputValue);
-        filterTable(inputValue);
+        filterTable(inputValue, continentFilter.value);
+      });
+
+      continentFilter.addEventListener('change', function () {
+        filterTable(searchInput.value.trim(), continentFilter.value);
       });
 
       window.addEventListener('popstate', function () {
@@ -121,15 +141,19 @@ const { id, isDark = false, classes = {}, bg } = Astro.props as Lenguadesenas;
       });
     }
 
-    function filterTable(query) {
+    function filterTable(query, continent) {
       const rows = tableBody ? tableBody.querySelectorAll('tr') : [];
 
       for (let i = 0; i < rows.length; i++) {
         const row = rows[i];
         const country = (row.querySelector('td:nth-child(1)') as HTMLElement)?.innerText?.toLowerCase();
         const language = (row.querySelector('td:nth-child(2)') as HTMLElement)?.innerText?.toLowerCase();
+        const rowContinent = (row.querySelector('td:nth-child(1) div div.text-xs') as HTMLElement)?.innerText?.toLowerCase();
 
-        if (country.includes(query.toLowerCase()) || language.includes(query.toLowerCase())) {
+        const matchesQuery = country.includes(query.toLowerCase()) || language.includes(query.toLowerCase());
+        const matchesContinent = !continent || rowContinent.includes(continent.toLowerCase());
+
+        if (matchesQuery && matchesContinent) {
           row.classList.remove('hidden');
         } else {
           row.classList.add('hidden');
