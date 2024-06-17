@@ -19,7 +19,7 @@
     "@astrolib/seo": "1.0.0-beta.5",
     "@fontsource-variable/inter": "^5.0.18",
     "@vercel/analytics": "^1.2.2",
-    "apexcharts": "^3.49.0",
+    "apexcharts": "^3.49.1",
     "astro": "^4.8.3",
     "astro-i18n-aut": "^0.7.0",
     "astro-icon": "^1.1.0",
