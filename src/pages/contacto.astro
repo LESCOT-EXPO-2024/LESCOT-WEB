@@ -1,9 +1,19 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 
+import Authbtn from "~/components/widgets/contacto/Authbtn.astro";
+import ContactIconBlock from "~/components/widgets/contacto/ContactIconBlock.astro";
+import TextInput from "~/components/widgets/contacto/TextInput.astro";
+import EmailContactInput from "~/components/widgets/contacto/EmailContactInput.astro";
+import PhoneInput from "~/components/widgets/contacto/PhoneInput.astro";
+import TextAreaInput from "~/components/widgets/contacto/TextAreaInput.astro";
+
+import { Icon } from 'astro-icon/components';
+
+import Headline from '~/components/ui/Headline.astro';
+
+const formTitle: string = "Rellena el formulario a continuación";
+const formSubTitle: string = "Te responderemos en 1-2 días hábiles.";
 const metadata = {
   title: 'Contacto',
 };
@@ -12,53 +22,101 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contacto" title="¡Hablemos!" />
+<!-- Contact Us -->
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+  <div class="mx-auto max-w-2xl lg:max-w-5xl">
+  <Headline title="¡Hablanos!" subtitle= "¿Tienes preguntas o quieres discutir un proyecto? Contáctanos y juntos crearemos la solución perfecta con nuestras herramientas y servicios." tagline="Contacto"/>
 
-  <ContactUs
-    title="Dejanos un mensaje"
-    subtitle="Si deseas contribuir a LESCO puedes hacerlo, enviando un mensaje a través de este formulario."
-    inputs={[
-      {
-        type: 'text',
-        name: 'Nombre',
-        label: 'Nombre',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Mensaje',
-    }}
-    disclaimer={{
-      label:
-        'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
-    }}
-    description="Nuestro equipo puede responder en un lapso de 24 horas."
-  />
 
-  <!-- Features2 Widget ************** -->
+    <div class="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
+      <div class="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
+        <h2
+          class="mb-8 text-xl font-bold text-neutral-700 dark:text-neutral-300"
+        >
+          {formTitle}
+        </h2>
+        <!-- Form for user input with various input fields.-->
+        <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
+        <form>
+          <div class="grid gap-4">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <TextInput
+                id="hs-firstname-contacts"
+                label="Nombre"
+                name="hs-firstname-contacts"
+              />
+              <TextInput
+                id="hs-lastname-contacts"
+                label="Apellidos"
+                name="hs-firstname-contacts"
+              />
+            </div>
+            <EmailContactInput id="hs-email-contacts" />
+            <PhoneInput 
+            id="hs-phone-number" 
+            label="Teléfono"
+            name="hs-phone-number"
+            />
+            <TextAreaInput
+              id="hs-about-contacts"
+              label="Tu mensaje..."
+              name="hs-about-contacts"
+            />
+          </div>
 
-  <Features2
-    title="¡Estamos para ayudar!"
-    items={[
-      {
-        title: 'Teléfono',
-        description: '+506 7190-3969',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'lescotranslator@gmail.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Ubicación',
-        description: 'Colegio Técnico Profesional Don Bosco, Alajuelita, Costa Rica',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+          <div class="mt-4 grid">
+            <Authbtn title="Enviar mensaje" />
+          </div>
+
+          <div class="mt-3 text-center">
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">
+              {formSubTitle}
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
+      <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        <ContactIconBlock
+          heading="Conocimiento"
+          content="Explora todos nuestros artículos de la base de conocimientos."
+          isLinkVisible={true}
+          linkTitle="Visita nuestro blog"
+          linkURL="/blog"
+          isArrowVisible={true}
+          ><Icon name="tabler:question-mark" class="w-6 h-6 text-primary"/>
+        </ContactIconBlock>
+
+        <ContactIconBlock
+          heading="FAQ"
+          content="Explora dudas rapidas sobre LESCO"
+          isLinkVisible={true}
+          linkTitle="Visita FAQ"
+          linkURL="/abecedario"
+          isArrowVisible={true}
+          ><Icon name="tabler:messages" class="w-6 h-6 text-primary"/>
+        </ContactIconBlock>
+
+        <ContactIconBlock
+          heading="Visitanos"
+          content="CEDES Don Bosco"
+          isAddressVisible={true}
+          addressContent="Concepción arriba, Alajuelita"
+          ><Icon name="tabler:map-pin" class="w-6 h-6 text-primary"/>
+        </ContactIconBlock>
+
+        <ContactIconBlock
+          heading="Escribenos un email"
+          content="¿Prefieres esta opción? Envíanos un email."
+          isLinkVisible={true}
+          linkTitle="lescotranslator@gmail.com"
+          linkURL="https://mail.google.com/mail/?view=cm&fs=1&to=lescotranslator@gmail.com"
+          ><Icon name="tabler:mail-opened" class="w-6 h-6 text-primary"/>
+        </ContactIconBlock>
+      </div>
+    </div>
+  </div>
+</section>
+
 </Layout>
