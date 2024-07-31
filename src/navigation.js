@@ -143,7 +143,8 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/visionlescot/' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/lesco-translator/' },
+    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/lescot/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61559610314126' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/LESCOT-EXPO-2024/LESCOT-WEB' },
   ],
 };
