@@ -23,7 +23,7 @@
     "astro": "^4.9.2",
     "astro-i18n-aut": "^0.7.0",
     "astro-icon": "^1.1.0",
-    "chart.js": "^4.4.2",
+    "chart.js": "^4.4.3",
     "datamaps": "^0.5.9",
     "flowbite": "^2.3.0",
     "limax": "4.1.0",
