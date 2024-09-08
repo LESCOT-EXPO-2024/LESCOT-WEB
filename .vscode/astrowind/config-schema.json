@@ -343,9 +343,12 @@
                     },
                     "heading": {
                       "type": "string"
+                    },
+                    "recepts": {
+                      "type": "string"
                     }
                   },
-                  "required": ["sans", "serif", "heading"]
+                  "required": ["sans", "serif", "heading", "recepts"]
                 }
               },
               "required": ["colors", "fonts"]

@@ -80,6 +80,7 @@ ui:
         sans: InterVariable
         serif: var(--ph-font-sans)
         heading: var(--ph-font-sans)
+        recepts: var(--ph-font-recepts)
       colors:
         default: rgb(16 16 16)
         heading: rgb(0 0 0)
