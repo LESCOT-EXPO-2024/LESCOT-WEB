@@ -15,7 +15,7 @@ module.exports = {
         sans: ['var(--aw-font-sans)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
-        recepts: ['var(--aw-font-recepts)', ...defaultTheme.fontFamily.recepts],
+        recepts: ['var(--aw-font-recepts)', ...defaultTheme.fontFamily.sans],
       },
     },
   },
