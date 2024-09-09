@@ -1,5 +1,4 @@
 ---
-import { changeLanguage } from "i18next";
 import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import Layout from "~/layouts/PageLayout.astro";
 import BlogList from "~/components/blog/List.astro";
@@ -9,7 +8,6 @@ import PostTags from "~/components/blog/Tags.astro";
 import { findTags, findCategories } from "~/utils/blog";
 import { blogListRobots, getStaticPathsBlogList } from "~/utils/blog";
 
-changeLanguage("es");
 
 export const prerender = true;
 export const getStaticPaths = (async ({ paginate }) => {
