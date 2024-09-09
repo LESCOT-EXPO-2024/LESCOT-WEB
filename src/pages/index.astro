@@ -1,28 +1,29 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+import { changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Note from "~/components/widgets/Note.astro";
 //import Features from '~/components/widgets/Features.astro';
 //import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Features3 from "~/components/widgets/Features3.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Steps2 from "~/components/widgets/Steps2.astro";
+import Content from "~/components/widgets/Content.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
 //import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Brands from '~/components/widgets/Brands.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Countdown from '~/components/widgets/Countdown.astro';
-import Fusion from '~/components/widgets/fusion.astro';
+import Stats from "~/components/widgets/Stats.astro";
+import Brands from "~/components/widgets/Brands.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Countdown from "~/components/widgets/Countdown.astro";
+import Fusion from "~/components/widgets/fusion.astro";
+import antecedentes from "~/content/antecedentes";
+import Language from "~/components/widgets/language.astro";
 
-
-import antecedentes from '~/content/antecedentes';
+changeLanguage("es");
 
 const metadata = {
-  title: 'LESCOT - LA WEB OFICIAL DEL PROYECTO 2024',
-  ignoreTitleTemplate: true,
+    title: "LESCOT - LA WEB OFICIAL DEL PROYECTO 2024",
+    ignoreTitleTemplate: true,
 };
 ---
 
@@ -54,6 +55,7 @@ const metadata = {
       >
     </Fragment>
   </Hero>
+<Language />
 
   <!-- Note Widget ******************* -->
   <Note />
