@@ -1,21 +1,21 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
+import { changeLanguage } from "i18next";
+import Layout from "~/layouts/PageLayout.astro";
 import Authbtn from "~/components/widgets/contacto/Authbtn.astro";
 import ContactIconBlock from "~/components/widgets/contacto/ContactIconBlock.astro";
 import TextInput from "~/components/widgets/contacto/TextInput.astro";
 import EmailContactInput from "~/components/widgets/contacto/EmailContactInput.astro";
 import PhoneInput from "~/components/widgets/contacto/PhoneInput.astro";
 import TextAreaInput from "~/components/widgets/contacto/TextAreaInput.astro";
+import { Icon } from "astro-icon/components";
+import Headline from "~/components/ui/Headline.astro";
 
-import { Icon } from 'astro-icon/components';
+changeLanguage("es");
 
-import Headline from '~/components/ui/Headline.astro';
-
-const formTitle: string = "Rellena el formulario a continuación";
-const formSubTitle: string = "Te responderemos en 1-2 días hábiles.";
+const formTitle: string = "Rellena el formulario a continuaci\u00F3n";
+const formSubTitle: string = "Te responderemos en 1-2 d\u00EDas h\u00E1biles.";
 const metadata = {
-  title: 'Contacto',
+    title: "Contacto",
 };
 ---
 

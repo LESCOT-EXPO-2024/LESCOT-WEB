@@ -11,6 +11,9 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 import tasks from './src/utils/tasks';
 
+import { defineConfig } from "astro/config";
+import astroI18next from "astro-i18next";
+
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
 
 import { ANALYTICS, SITE } from './src/utils/config.ts';
@@ -31,6 +34,7 @@ export default defineConfig({
 
   output: 'static',
   integrations: [
+    astroI18next(),
     tailwind({
       applyBaseStyles: false,
     }),

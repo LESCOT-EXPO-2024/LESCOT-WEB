@@ -23,6 +23,7 @@
     "apexcharts": "^3.49.0",
     "astro": "^4.11.5",
     "astro-i18n-aut": "^0.7.0",
+    "astro-i18next": "^1.0.0-beta.21",
     "astro-icon": "^1.1.0",
     "chart.js": "^4.4.3",
     "datamaps": "^0.5.9",
