@@ -11,7 +11,7 @@ import Content from "~/components/widgets/Content.astro";
 import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
 //import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from "~/components/widgets/Stats.astro";
-import Brands from "~/components/widgets/Brands.astro";
+//import Brands from "~/components/widgets/Brands.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Countdown from "~/components/widgets/Countdown.astro";
 import Fusion from "~/components/widgets/fusion.astro";
@@ -36,29 +36,29 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:brand-github',
       },
-      { text: 'Conoce más', href: '#metas' },
+      { text: 'Conoce más', href: '#descripcion-general' },
     ]}
     image={{ src: '~/assets/images/patron_index.png', alt: 'LESCOT Hero Image' }}
   >
     <Fragment slot="title">
       El traductor LESCOT <span class="hidden xl:inline">vuelve en</span>
-      <span class="text-accent highlight"> EXPOTEC 2024</span> + Nuevas novedades
+      <span class="text-accent highlight"> EXPOTEC 2024</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">LESCOT</span> pretende buscar una solución a las brechas de comunicación presentes entre
-        personas sordas y oyentes.</span
+        <span class="font-semibold">LESCOT</span> es una iniciativa de cuatro estudiantes del CTP Don Bosco para desarrollar traductores de LESCO en Costa Rica. </span
       >
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
   <Note />
+
   <Features3
   id="descripcion-general"
   title="Descripción general"
-  subtitle="LESCOT pretende buscar una solución a las brechas de comunicación presentes entre personas sordas y oyentes, mediante la adaptabilidad de un “traductor” de LESCO utilizando el lenguaje de programación Python junto a un sistema combinado de visión artificial, facilitando las interacciones entre personas sordas y oyentes, además de apoyar la Ley No. 9822, No. 9049 y No. 7600."
+  subtitle="LESCOT busca reducir las barreras de comunicación entre personas sordas y oyentes mediante el desarrollo de un guante capaz de reconocer señas de la Lengua de Señas Costarricense (LESCO). Este dispositivo no solo facilita la interacción entre personas sordas y oyentes, sino que también apoya el cumplimiento de la Ley No. 9822 y entre otras, que promueve la igualdad de derechos y la inclusión de las personas con discapacidad en Costa Rica."
   tagline="Solución a la inclusividad"
   image={{
     src: 'https://nvidianews.nvidia.com/_gallery/get_file/?file_id=6189e835b3aed353997db7f8',
@@ -69,7 +69,7 @@ const metadata = {
   <Steps2
     id="metas"
     title="Nuestras metas"
-    subtitle="Proponer una solución a las brechas de comunicación en la vida cotidiana de las personas con discapacidad auditiva con el desarollo de un “traductor” de LESCO (Lenguaje de Señas Costarricense)."
+    subtitle="Proponer una solución a las brechas de comunicación en la vida cotidiana de las personas con discapacidad auditiva con el desarrollo de un “traductor” de LESCO (Lengua de Señas Costarricense)."
     isReversed={true}
     callToAction={{
       text: 'Conoce más de nosotros',
@@ -79,20 +79,20 @@ const metadata = {
       {
         title: 'Analizar',
         description:
-          'Las brechas de comunicación entre sordos y oyentes en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre estas personas mediante la creación de un formulario.',
+          'las brechas de comunicación entre sordos y oyentes en la vida cotidiana identificando los factores que impiden una comunicación efectiva entre estas personas mediante la creación de un formulario.',
         icon: 'tabler:chart-histogram',
       },
       {
-        title: 'Almacenar',
+        title: 'Crear',
         description:
-          'Una base de datos que contenga las señas para el <span class="italic">"machine learning"</span> y su correcto reconocimiento e interpretación a texto.',
+          'una base de datos con las coordenadas respectivas de las señas mediante del uso de acelerómetros.',
         icon: 'tabler:folders',
       },
       {
         title: 'Desarrollar',
         description:
-          'Un algoritmo de reconocimiento preciso y confiable de gestos LESCO, permitiendo al traductor desempeñarse como intérprete, brindando señas fieles y generando traducciones coherentes.',
-        icon: 'tabler:brand-python',
+          'Un guante de reconocimiento preciso y confiable de señas LESCO (Lengua de Señas Costarricense), permitiendo al dispositivo desempeñarse como interpretador, brindando señas fieles y generando traducciones coherentes.',
+        icon: 'tabler:hand-click',
       },
       {
         title: 'Implementar',
@@ -105,7 +105,7 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
   <Stats
-  id="Stats"
+  id="forms"
   title= 'Google Forms'
   subtitle= '¿Cuantos idiomas hablas?'
   stats={[
@@ -273,7 +273,7 @@ const metadata = {
       alt:'Imagen JETSON ORIN',
     }}
   />
-  <!-- Brands Widget ****************** -->
+  <!-- Brands Widget ****************** 
   <Brands
     title="Patrocinadores y Colaboladores"
     subtitle="Agradecemos a cada uno de ellos por el apoyo continuo a LESCOT."
@@ -317,117 +317,8 @@ const metadata = {
         alt: 'Yahoo',
       },
     ]}
-  />
-
-  <!-- Features Widget *************** 
-    <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
   />-->
 
-  <!-- Features2 Widget ************** 
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:electronics',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>-->
   <Countdown 
     title="EXPOTEC 2024"
     subtitle="Estamos trabajando, solo espera a EXPOTEC 2024..."
@@ -438,61 +329,8 @@ const metadata = {
 
   <BlogLatestPosts
     title="¡Encuentra más contenido en nuestro blog!"
-    information={`En este blog podras explorar la información de nuestro proyecto, ademas de conocer la increible cultura LESCO, que forma parte de Costa Rica.
-                `}
+    information={`En este blog podras explorar la información de nuestro proyecto, ademas de conocer la increible cultura LESCO, que forma parte de Costa Rica.`}
   />
-
-  <!-- FAQs Widget ******************* 
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />-->
-
-  <!-- Stats Widget ****************** 
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />-->
 
   <!-- CallToAction Widget *********** -->
 

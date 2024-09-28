@@ -9,44 +9,28 @@ interface antecedente {
   
 const antecedentes: antecedente[] = [
     {
-        titulo: 'INTERPRETES',
-        subtitulo: 'de lengua de señas',
-        link: 'antecedentes',
-        descripcion: 'Son servicios de interpretación LESCO para actividades. Tienen intérpretes LESCO que hablan distintos idiomas, por lo que pueden hacer la interpretación desde lenguaje de señas sin problema alguno. Tienen equipos de interpretación simultánea que pueden complementar el servicio.',
-        imageSrc: 'https://www.ucr.ac.cr/medios/fotos/2023/aks_5165-copia-64b1a6edd44ef.jpg',
-        imageAlt: 'INTERPRETES'
+        titulo: 'UCLA',
+        subtitulo: 'Universidad de California, Los Ángeles, Estados Unidos',
+        link: 'https://www.forbes.com.mx/tecnologia-guantes-que-traducen-el-lenguaje-de-signos/ ',
+        descripcion: 'Un grupo de estudiantes de la UCLA desarollaron unos innovadores guantes que traducen la lengua de señas americana (ASL) en habla audible a través de un teléfono inteligente. Estos guantes están equipados con tecnología wearable, utilizando sensores delgados y elásticos hechos de hilo conductor que se extienden a lo largo de los cinco dedos. Los sensores recogen los movimientos de las manos y la posición de los dedos, permitiendo representar cada una de las señas y letras del alfabeto. Los datos recopilados son enviados a un teléfono inteligente, que los traduce en voz audible.',
+        imageSrc: 'https://cdn.forbes.com.mx/2020/08/guantes-lenguaje-se%C3%B1as-signos-1024x576.jpg',
+        imageAlt: 'UCLA'
     },
     {
-        titulo: 'PIELS',
-        subtitulo: 'IncluTec',
-        link: 'https://www.tec.ac.cr/traductor-lesco',
-        descripcion: 'PIELS buscaba realizar un traductor de texto a LESCO, pero al realizar el avatar en la plataforma Unity notaron que la programación era elaborada, así que, decidieron simplificar la acción de programar cada seña que hiciera el avatar. Inclu- TEC, grupo de investigación de interés de la escuela de ingeniería en computación, se ha dedicado a investigar y aplicar tecnologías que ofrezcan facilidades para las personas con discapacidad.',
-        imageSrc: 'https://i.ytimg.com/vi/tvRJh1PdbWU/maxresdefault.jpg',
+        titulo: 'LENGUANTEC',
+        subtitulo: 'Tecnológico de Monterrey, Mexico',
+        link: 'https://conecta.tec.mx/es/noticias/san-luis-potosi/educacion/crean-prototipo-de-guante-que-ensena-lengua-de-senas-personas',
+        descripcion: 'El Tecnológico de Monterrey ha creado un prototipo de guante que enseña la lengua de señas mexicana (LSM). Este dispositivo utiliza sensores de flexión y se conecta a otros dispositivos mediante WiFi y Bluetooth, utilizando el microcontrolador ESP32. Los estudiantes desarrollaron una aplicación propia para facilitar la interacción con el guante y su uso en la enseñanza del LSM, brindando una herramienta innovadora para la inclusión de personas sordas.',
+        imageSrc: 'https://conecta.tec.mx/sites/default/files/inline-images/presentacion-lenguantec-expo-ingenieri%CC%81a.webp',
         imageAlt: 'PIELS INCLUTEC'
     },
     {
-        titulo: 'ACE-ASL',
-        subtitulo: 'SignAll Technologies Inc',
-        link: 'https://ace-asl-learn-fingerspelling.softonic.com/android',
-        descripcion: 'Es una aplicación gratuita desarrollada por SignAl Technologies Inc., tiene el fin de enseñar la Lengua de Señas Americana (ASL). Esta consta con una parte interactiva en ella se puede practicar las la lengua con una persona sorda y una persona oyente, a través del uso de la cámara del teléfono.',
-        imageSrc: 'https://ph-files.imgix.net/0076d9d4-b7af-4e1c-9a7c-80f49392d0c3.jpeg?auto=format&fit=crop',
+        titulo: 'SignAloud',
+        subtitulo: 'Lemelson-MIT, Estados Unidos',
+        link: 'https://theindexproject.org/award/nominees/2051',
+        descripcion: 'El proyecto SignAloud ha desarrollado guantes capaces de reconocer los gestos de la mano y las señas correspondientes en ASL (American Sign Language). Cada guante cuenta con un sensor que envía los datos a través de Bluetooth a una computadora central. Esta computadora procesa la información utilizando regresiones estáticas secuenciales, imitando el funcionamiento del sistema neurológico. Si los datos coinciden con un gesto específico, el sistema reproduce la palabra o frase correspondiente a través de un altavoz. Este innovador proyecto fue creado por dos estudiantes de la Universidad de Washington, Thomas Pryor y Navid Azodi para el gran premio de inventores Lemelson-MIT',
+        imageSrc: 'https://api.theindexproject.org/storage/designs/48e6e6ea70e93034f0fe799c81c5c192.jpg',
         imageAlt: 'ACE ASL'
-    },
-    {
-        titulo: 'HETAH',
-        subtitulo: '@fundacionhetah',
-        link: 'https://hetah.net/',
-        descripcion: 'La fundación hetah se ha encargado de crear herramientas para enfrentar los desafíos que presenta la humanidad, una de estas herramientas es un traductor de lenguaje de señas a avatar, ya sea en 2D o 3D. Con el avatar 2D han logrado traducir 884 señas de diferentes lenguajes de señas de distintos países, con el 3D han logrado traducir 1365 señas. De igual manera, este traductor se encuentra en desarrollo, por lo que aún le faltan muchas cosas por mejorar.',
-        imageSrc: 'https://s3.amazonaws.com/ideame-images/resizers/47941_686_387_fill_undefined_projectImageOriginalUrl.jpeg',
-        imageAlt: 'HETAH'
-    },
-    {
-        titulo: 'Sign-Speak',
-        subtitulo: '@Sign_Speak_',
-        link: 'https://www.sign-speak.com/',
-        descripcion: 'Sign Speak es una aplicación móvil que utiliza inteligencia artificial para traducir el lenguaje de señas al lenguaje hablado. La aplicación fue creada por Yamilet Payano, una emprendedora sorda, con el objetivo de hacer la comunicación más accesible para las personas sordas o con problemas de audición. La aplicación utiliza una combinación de visión artificial y aprendizaje automático para identificar y traducir gestos en lenguaje de señas. El usuario simplemente utiliza la cámara del dispositivo y la aplicación mostrará el texto correspondiente en la pantalla, de igual manera se encuentra en desarrollo.',
-        imageSrc: 'https://elcomercio.pe/resizer/nqgouXT6X5s0E6FLjl3JmQly7MQ=/620x0/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/G36MF5GLVJGKXAQYYBKLRDMFQM.jpg',
-        imageAlt: 'SIGN SPEAK'
     },
 ];
 export default antecedentes;
