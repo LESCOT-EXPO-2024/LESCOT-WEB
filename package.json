@@ -32,7 +32,7 @@
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "nodemailer": "^6.9.14",
-    "preline": "^2.1.0",
+    "preline": "^2.7.0",
     "save": "^2.9.0",
     "typescript-esbuild": "^0.4.10",
     "unpic": "^3.18.0"
